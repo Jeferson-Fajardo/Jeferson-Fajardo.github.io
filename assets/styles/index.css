@@ -1,4 +1,78 @@
 
-body{
-    background-color: rgb(73, 67, 67);
+.sub-container{ 
+    height: 40px; 
+} 
+
+.lines-header{
+    border-top: 3px solid rgb(102, 102, 102); 
+    width: 16%; 
+} 
+.container-circle{
+    width: 45px; 
+    height: 40px; 
+} 
+.circle-header{
+    border: 3px solid transparent;
+    border-radius: 50px; 
+    width: 28px; 
+    height: 28px;
+    background-color: rgb(102, 102, 102); 
+} 
+.navegation-header{
+    height: 50px;
+    border: 4px solid black;
+    border-radius: 25px;
+    
+}
+.main-list-header{
+    width: 80%;
+    height: 100%;
+}
+.secondary-list-header{
+    width: 20%;
+    height: 100%;
+    padding-right:2rem;
+}
+ul {
+    margin-bottom: 0;
+    padding-left: 1rem;
+}
+.color-option{
+    background-color: black;
+    color: white; 
+    border-radius: 10px;
+    width: 90px;
+    cursor: pointer;
+}
+
+.container-fluid{
+    background-color: transparent;
+}
+
+.header-cell-phone{
+    
+    height: 50px;
+    background-color: rgb(116, 139, 139);
+    
+}
+.menu-navegation{
+    padding-right: 1rem ;
+
+}
+
+@media screen and (max-width: 576px) {
+   
+    .box-header {
+        display: none;
+     
+    }
+    
+}
+
+@media screen and (min-width: 576px) {
+   
+    .header-cell-phone{
+        display: none!important;
+    }
+    
 }

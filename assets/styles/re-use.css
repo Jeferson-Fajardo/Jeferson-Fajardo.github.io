@@ -4,10 +4,39 @@
     margin: 0;
 }
 
+/* widths */
+.w-full{
+    width: 100%;
+}
+
+/* heigths */
+.h-full{
+    height: 100%;
+}
+
+
 /* borders */
 
 .borders-cero-l-r-b{
     border-left: 0;
     border-right: 0;
     border-bottom: 0;
+}
+
+/* list */
+
+ol, ul{
+    list-style: none;
+}
+
+/* select */
+
+.box-transparent{
+    background-color: transparent;
+    border: transparent;
+}
+
+/* colors */
+.color-black{
+    color: black;
 }
