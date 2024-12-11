@@ -1,0 +1,121 @@
+.sub-container{ 
+    height: 40px;      
+} 
+.sub-container:hover{
+    transform: scale(0.95);
+    transition: .3s ease all;
+}
+.lines-header{
+    border-top: 3px solid rgb(187, 187, 187); 
+    width: 16%; 
+} 
+.lines-color-bold{
+    border-top: 3px solid rgb(102, 102, 102); 
+}
+.container-circle{
+    width: 45px; 
+    height: 40px; 
+} 
+.circle-header{
+    border: 3px solid transparent;
+    border-radius: 50px; 
+    width: 28px; 
+    height: 28px;
+    background-color: rgb(187, 187, 187); 
+} 
+
+.box-shadow-lines-circle{
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+.navegation-header{
+    height: 50px;
+    border: 4px solid black;
+    border-radius: 25px;
+    background-color: snow;
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(0.5);
+    transition: .3s ease all;
+}
+.navegation-header-active{
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+}
+.main-list-header{
+    width: 80%;
+    height: 100%;
+}
+.secondary-list-header{
+    width: 20%;
+    height: 100%;
+    padding-right:2rem;
+}
+ul {
+    margin-bottom: 0;
+    padding-left: 1rem;
+}
+.color-option{
+    background-color: black;
+    color: white; 
+    border-radius: 10px;
+    width: 90px;
+    cursor: pointer;
+}
+
+.container-fluid{
+    background-color: transparent;
+}
+
+.header-cell-phone{
+    height: 50px;
+    background-color: rgb(116, 139, 139);
+}
+.menu-navegation{
+    padding-right: 1rem;
+}
+
+.line-underline:hover{
+    text-decoration: underline!important;
+    text-decoration: gray;
+    text-underline-offset: 4px;
+}
+
+.dropdown-active{
+    position: absolute!important;
+    inset: 0px auto auto 0px;
+    margin: 0px;
+    transform: translate3d(0px, 40px, 0px);
+}
+
+
+/* changes boostrapt */
+.dropdown-toggle::after {
+    display: none;
+    font-size: 1.1em;
+}
+.dropdown-menu-dark{
+    --bs-dropdown-bg: #000000;
+}
+
+
+/* @media's */
+
+@media screen and (max-width: 576px) {
+   
+    .box-header {
+        display: none;
+    }
+    
+}
+
+@media screen and (min-width: 576px) {
+   
+    .header-cell-phone{
+        display: none!important;
+    }
+    
+}
+
+

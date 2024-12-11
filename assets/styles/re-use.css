@@ -23,6 +23,12 @@
     border-bottom: 0;
 }
 
+/* border-color */
+
+.border-color-transparent{
+    border-color:transparent!important;
+}
+
 /* list */
 
 ol, ul{
@@ -39,4 +45,32 @@ ol, ul{
 /* colors */
 .color-black{
     color: black;
+}
+
+/* backgraound */
+.background-c-gray-102{
+    background-color: rgb(102 102 102)!important;
+}
+
+
+/* padding */
+
+.pt-50px{
+    padding-top:50px;
+}
+
+.pt-100px{
+    padding-top: 100px!important;
+}
+
+
+/* z-index */
+.z-index-1000{
+    z-index: 1000;
+}
+
+/* text-decoration */
+
+.text-decoration-underline{
+    text-decoration: underline;
 }
