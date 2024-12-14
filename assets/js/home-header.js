@@ -1,7 +1,6 @@
-console.log("javascript header vinculado.....");
 // globals variables
 const menuHeader = document.querySelector(".menu-header");
-    subContainer = document.querySelector(".sub-container"),
+    showHeader = document.querySelector(".show-header"),
     linesHeader = document.querySelectorAll(".lines-header"),
     circleHeader = document.querySelector(".circle-header"),
     navegationHeader = document.querySelector(".navegation-header"),
@@ -40,7 +39,7 @@ function hidenMenu(){
 
 function eventsShowAndHiden() {
     // event for show the menu.
-    subContainer.addEventListener("mouseenter", showMenu);
+    showHeader.addEventListener("mouseenter", showMenu);
 
     // event for hiden el menu.
     boxHeader.addEventListener("mouseleave", hidenMenu);    
@@ -52,7 +51,7 @@ $witch.forEach(aSwitch => {
     aSwitch.addEventListener("click", function(){
 
         if (! flag) {
-            subContainer.removeEventListener("mouseenter", showMenu);
+            showHeader.removeEventListener("mouseenter", showMenu);
             boxHeader.removeEventListener("mouseleave", hidenMenu);
             flag = true;
         } else {

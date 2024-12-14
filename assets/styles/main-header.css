@@ -1,13 +1,13 @@
 .sub-container{ 
     height: 40px;      
 } 
-.sub-container:hover{
+.show-header:hover{
     transform: scale(0.95);
     transition: .3s ease all;
 }
 .lines-header{
     border-top: 3px solid rgb(187, 187, 187); 
-    width: 16%; 
+    width: 34%; 
 } 
 .lines-color-bold{
     border-top: 3px solid rgb(102, 102, 102); 
