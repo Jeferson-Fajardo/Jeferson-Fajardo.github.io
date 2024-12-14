@@ -10,18 +10,20 @@
         <div class=" col-sm-11 col-lg-10 col-xl-8 col-xxl-6 navegation-header d-flex justify-content-between">
             <ul class=" main-list-header d-flex align-items-center gap-4 "> 
                 <li class="">
-                    <a href="#" class="color-option d-flex justify-content-center text-decoration-none">
+                    <a href="/" class="d-flex justify-content-center text-decoration-none color-black {% if page.url == '/' %} color-option {% endif %}">
                         About me
                     </a>
                 </li>
                 <li>
-                    <ul class="navbar-nav show-to-learn ">
+                    <ul class="navbar-nav show-to-learn">
                         <li class="nav-item dropdown">
-                        <button class="btn dropdown-toggle border-color-transparent content-to-learn line-underline " data-bs-toggle="dropdown" aria-expanded="false">
-                            To learn 
-                        </button>
+                                <button class="btn dropdown-toggle border-color-transparent content-to-learn line-underline " data-bs-toggle="dropdown" aria-expanded="false">
+                                    <div class="{% if page.url contains '/to-learn/' %} d-block color-option {% endif %}  ">
+                                        To learn
+                                    </div>
+                                </button>
                         <ul class="dropdown-menu dropdown-menu-dark dropdown-to-learn">
-                            <li><a class="dropdown-item" href="#">Cibersecurity</a></li>
+                            <li><a class="dropdown-item {% if page.url == '/to-learn/cibersecurity/' %} text-decoration-underline {% endif %} " href="/to-learn/cibersecurity">Cibersecurity</a></li>
                             <li><a class="dropdown-item" href="#">Another action</a></li>
                             <li><a class="dropdown-item" href="#">Something else here</a></li>
                         </ul>
@@ -29,16 +31,18 @@
                     </ul>               
                 </li>
                 <li class="line-underline">
-                    <a href="#" class="text-decoration-none color-black ">Words</a>
+                    <a href="/words" class="text-decoration-none color-black {% if page.url == '/words/'  %} d-block color-option {% endif %}">Words</a>
                 </li>
                 <li> 
                     <ul class="navbar-nav show-others">
                         <li class="nav-item dropdown">
-                        <button class="btn dropdown-toggle border-color-transparent content-others line-underline" data-bs-toggle="dropdown" aria-expanded="false">
-                            Others
+                        <button class="btn dropdown-toggle border-color-transparent content-others line-underline " data-bs-toggle="dropdown" aria-expanded="false">
+                            <div class="{% if page.url contains '/others/' %} color-option {% endif %}  ">
+                                Others
+                            </div>
                         </button>
                         <ul class="dropdown-menu dropdown-menu-dark dropdown-others ">
-                            <li><a class="dropdown-item" href="#">Phrases</a></li>
+                            <li><a class="dropdown-item {% if page.url == '/others/phrases/' %} text-decoration-underline {% endif %} " href="/others/phrases/">Phrases</a></li>
                             <li><a class="dropdown-item" href="#">Another action</a></li>
                             <li><a class="dropdown-item" href="#">Something else here</a></li>
                         </ul>
@@ -48,7 +52,7 @@
             </ul>
             <ul class="secondary-list-header d-flex align-items-center justify-content-end gap-4">
                 <li class="line-underline">
-                    <a href="#" class="text-decoration-none color-black">About </a>
+                    <a href="/About/" class="text-decoration-none color-black {% if page.url == '/About/' %} color-option d-block {% endif %}">About </a>
                 </li>
             </ul>
         </div>
@@ -57,7 +61,7 @@
 <nav class="header-cell-phone d-flex justify-content-between align-items-center ">
     <ul>
         <li>
-            <a href="#">About me</a>        
+            <a href="/">About me</a>        
         </li>
     </ul>
     <span class="menu-navegation">|||</span>

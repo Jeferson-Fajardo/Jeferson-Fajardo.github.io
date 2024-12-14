@@ -58,10 +58,13 @@ ul {
 }
 .color-option{
     background-color: black;
-    color: white; 
+    color: white;
     border-radius: 10px;
-    width: 90px;
+    width: auto;
     cursor: pointer;
+    padding-left: 8px;
+    padding-right: 8px;
+  
 }
 
 .container-fluid{
@@ -88,7 +91,6 @@ ul {
     margin: 0px;
     transform: translate3d(0px, 40px, 0px);
 }
-
 
 /* changes boostrapt */
 .dropdown-toggle::after {

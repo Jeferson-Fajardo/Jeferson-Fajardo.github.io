@@ -1,3 +1,4 @@
+console.log("javascript header vinculado.....");
 // globals variables
 const menuHeader = document.querySelector(".menu-header");
     subContainer = document.querySelector(".sub-container"),
