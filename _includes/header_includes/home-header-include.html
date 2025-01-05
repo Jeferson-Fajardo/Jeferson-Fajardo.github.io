@@ -1,0 +1,42 @@
+<div class="container-fluid box-header position-fixed z-index-1000">
+    <div class=" sub-container d-flex justify-content-center" >
+        <div class="show-header d-flex justify-content-center align-items-center col-sm-9 col-lg-8 col-xl-6 col-xxl-4" >
+            <div class="lines-header borders-cero-l-r-b switch"></div>
+            <div class="web-name-container d-flex justify-content-center align-items-center switch">
+                <div class="align-items-center h-35-px">
+                    <img src="/assets/images/flower.png" class="logo-gray-filter logo" alt="logo" height="26px">
+                </div>
+                <h1 class="web-name">Murasaki</h1>
+            </div>
+            <div class="lines-header borders-cero-l-r-b switch"></div>
+        </div>
+    </div>
+    <nav class=" row justify-content-center menu-header invisible ">
+        <div class=" col-sm-11 col-lg-10 col-xl-8 col-xxl-6 navegation-header d-flex justify-content-between">
+            <ul class=" main-list-header d-flex align-items-center gap-3 list-style-none"> 
+               
+                <li class="line-underline">
+                    <a  {% unless page.url == '/' %}href="/"{% endunless %} class="d-flex justify-content-center text-decoration-none color-black {% if page.url == '/' %} color-option {% endif %}">
+                        About me
+                    </a>
+                </li>
+                {% include header_includes/header-list-include.html %}
+            </ul>
+            {% include header_includes/header-about-include.html %}
+        </div>
+    </nav>
+</div>
+<nav class="header-cell-phone d-flex justify-content-between align-items-center w-full ">
+    <ul class="list-style-none">
+        <li>
+            <a {% unless page.url == '/' %}href="/"{% endunless %} class="color-black {% if page.url == '/' %} line-underline {% else %} text-decoration-none {% endif %}">About me</a>        
+        </li>
+    </ul>
+    <i class="bi bi-list menu-navegation"></i>
+</nav>
+<div class="w-full d-flex justify-content-end">
+    <div class="accordion-base " >      
+        {% include header_includes/header-list-include.html %}
+        {% include header_includes/header-about-include.html %}
+    </div>
+</div>

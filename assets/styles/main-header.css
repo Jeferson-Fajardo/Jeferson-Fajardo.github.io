@@ -1,3 +1,8 @@
+/* Desktop */
+.box-header.hidden{
+    transform: translateY(-100%); 
+}
+
 .sub-container{ 
     height: 40px;      
 } 
@@ -12,17 +17,25 @@
 .lines-color-bold{
     border-top: 3px solid rgb(102, 102, 102); 
 }
-.container-circle{
-    width: 45px; 
+.web-name-container{
+    width: 140px;
     height: 40px; 
 } 
-.circle-header{
-    border: 3px solid transparent;
-    border-radius: 50px; 
-    width: 28px; 
-    height: 28px;
-    background-color: rgb(187, 187, 187); 
-} 
+.logo-gray-filter{
+    filter: grayscale(100%) contrast(24%);
+}
+.logo-dropshadow-filter{
+   filter: drop-shadow(0px 3px 3px #66336d);
+}
+.web-name{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 1.6rem;
+    color:rgb(102, 102, 102);
+}
+.web-name-shadow{
+    text-shadow: 2px 2px 4px #66336d, -2px -2px 4px #fff;
+    color: #151414;
+}
 
 .box-shadow-lines-circle{
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
@@ -48,10 +61,14 @@
     height: 100%;
 }
 .secondary-list-header{
+    display: flex;
+    align-items: center;
+    justify-content: end;
     width: 20%;
     height: 100%;
     padding-right:2rem;
 }
+
 ul {
     margin-bottom: 0;
     padding-left: 1rem;
@@ -64,19 +81,11 @@ ul {
     cursor: pointer;
     padding-left: 8px;
     padding-right: 8px;
-  
+    text-align: center;
 }
 
 .container-fluid{
     background-color: transparent;
-}
-
-.header-cell-phone{
-    height: 50px;
-    background-color: rgb(116, 139, 139);
-}
-.menu-navegation{
-    padding-right: 1rem;
 }
 
 .line-underline:hover{
@@ -85,39 +94,148 @@ ul {
     text-underline-offset: 4px;
 }
 
+.dropdown-base{
+    opacity: 0;
+    visibility: hidden;
+    background-color: snow;
+    position: absolute;
+    height: auto;
+    width: auto;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px; 
+    list-style: none;
+    padding-left: 0;
+    padding-top: 5px;
+    padding-bottom: 10px;
+    border-left: 3px solid black;
+    border-right: 3px solid black;
+    border-bottom: 3px solid black;
+    max-height: 0;
+    overflow-y: auto;  
+}
+
+.dropdown-base a{
+    color: rgb(70, 70, 70);
+    text-decoration: none;
+}
+
+.dropdow-option{
+    text-underline-offset: 3px;
+}
+
+.dropdow-option:hover{ 
+    background-color: rgb(34, 33, 33);
+}
+
+.dropdow-option:hover a{
+    color: white!important;
+}
+
+.dropdown-to-learn{
+    top: 42.3px;
+    left: 122px;
+}
+.dropdown-others{
+    top: 42.3px;
+    left: 256px;
+} 
 .dropdown-active{
-    position: absolute!important;
-    inset: 0px auto auto 0px;
-    margin: 0px;
-    transform: translate3d(0px, 40px, 0px);
+    visibility: visible;
+    opacity: 1;
+    max-height: 100vh;
+    transition: max-height 1.5s linear; 
+}
+
+/* cell-phone */
+
+.header-cell-phone{
+    height: 50px;
+    background-color: snow;
+    position: fixed;
+}
+.header-cell-phone.hidden {
+    transform: translateY(-100%);
+}
+.menu-navegation{
+    padding-right: 1rem;
+    font-size: 24px;
+}
+
+.accordion-base{
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1000;
+    position: fixed;
+    top: 50px;
+    right: 5.5px;
+    max-height: 0; 
+    height: auto; 
+    width: 97px;
+    overflow: visible;
+    padding: 10px;
+    padding-top: 5px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    background-color: snow;
+}
+.accordion-active{
+    opacity: 1;
+    overflow: hidden; 
+    visibility: visible;
+    max-height: 60vh;
+    transition: max-height 1.5s linear; 
 }
 
 /* changes boostrapt */
-.dropdown-toggle::after {
-    display: none;
-    font-size: 1.1em;
-}
-.dropdown-menu-dark{
-    --bs-dropdown-bg: #000000;
-}
-
 
 /* @media's */
 
 @media screen and (max-width: 576px) {
-   
+    
     .box-header {
         display: none;
     }
-    
+    .secondary-list-header{
+        width: auto;
+        padding-left: 0rem;
+    }
+
+    .dropdown-to-learn, .dropdown-others{
+        padding-top: 10px;
+        position: fixed;
+        left: auto; 
+    }
+
+    .dropdown-to-learn{
+        top: 60px;
+        right: 116px;
+    }
+
+    .dropdown-others{
+        top: 85px;
+        right: 116px;
+    }
+
+    .dropdown-active{
+        transition:  0.3s ease-in-out;
+    }
+
+    .dropdown-base{
+        border-radius: 10px;
+        border: 0;
+        background-color: snow;
+    }
+    .secondary-list-header{
+        padding-right:0rem;
+        justify-content: start;
+    }
 }
 
-@media screen and (min-width: 576px) {
+@media screen and (min-width: 577px) {
    
-    .header-cell-phone{
+    .header-cell-phone, .accordion-base{
         display: none!important;
-    }
-    
+    } 
 }
 
 

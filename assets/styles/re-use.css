@@ -31,7 +31,7 @@
 
 /* list */
 
-ol, ul{
+.list-style-none{
     list-style: none;
 }
 
@@ -46,7 +46,9 @@ ol, ul{
 .color-black{
     color: black;
 }
-
+.color-black-important{
+    color: black!important;
+}
 /* backgraound */
 .background-c-gray-102{
     background-color: rgb(102 102 102)!important;
@@ -62,6 +64,9 @@ ol, ul{
 .pt-100px{
     padding-top: 100px!important;
 }
+.pl-0_75rem{
+    padding-left: 0.75rem;
+}
 
 
 /* z-index */
@@ -73,4 +78,19 @@ ol, ul{
 
 .text-decoration-underline{
     text-decoration: underline;
+}
+.text-decoration-none{
+    text-decoration: none;
+}
+
+/* pxs */
+.h-35-px{
+    height: 35px;
+}
+
+/* changes of bootstrapt */
+
+ol, ul {
+    padding-left: 0rem;
+
 }

@@ -3,5 +3,3 @@ baseurl: ""
 url: "https://Jeferson-Fajardo.github.io"
 theme: minima
 permalink: prety
-include:
-  -views
