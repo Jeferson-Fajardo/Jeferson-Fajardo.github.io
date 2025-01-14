@@ -13,6 +13,8 @@ const showHeader = document.querySelector(".show-header"),
     navegationHeader = document.querySelector(".navegation-header"),
     boxHeader = document.querySelector(".box-header"),
     addSpace = document.querySelector(".add-space"),
+    iconToLearnExpandMore = document.querySelector(".i-to-learn-expand-more"),
+    iconOthersExpandMore = document.querySelector(".i-others-expand-more"),
     showToLearn = document.querySelector(".show-to-learn"),
     contentToLearn = document.querySelector(".content-to-learn"),
     showOthers = document.querySelector(".show-others"),
@@ -28,9 +30,9 @@ let flagMainMenu = false,
     // Know if the screen is small.
     function isSmallScreen() {
         if (window.matchMedia) {
-            return window.matchMedia('(max-width: 576px)').matches;
+            return window.matchMedia('(max-width: 767px)').matches;
         } else {
-            return window.innerWidth <= 576;
+            return window.innerWidth <= 767;
         }
     }
   
@@ -41,7 +43,7 @@ let flagMainMenu = false,
 
     // Show or hidden the main menu.  
     function showMenu(){
-        addSpace.classList.add("pt-100px");
+        addSpace.classList.add("more-mt-120px");
         navegationHeader.classList.add("navegation-header-active");
         webName.classList.add("web-name-shadow");
         logo.classList.remove("logo-gray-filter");
@@ -54,7 +56,7 @@ let flagMainMenu = false,
     }
     
     function hiddenMenu(){
-        addSpace.classList.remove("pt-100px");
+        addSpace.classList.remove("more-mt-120px");
         navegationHeader.classList.remove("navegation-header-active");
         webName.classList.remove("web-name-shadow");
         logo.classList.add("logo-gray-filter");
@@ -93,13 +95,20 @@ let flagMainMenu = false,
          });
      });
   
-    //Events of click or touchstart for show the dropdowns.
-    contentToLearn.addEventListener(eventType, function() { 
+    // Events of click or touchstart for show the dropdowns.
+    contentToLearn.addEventListener(eventType, function() {
+        changeIconArrow(iconToLearnExpandMore);
         toggleDropdown(showToLearn);
     });
     contentOthers.addEventListener(eventType, function() {
+        changeIconArrow(iconOthersExpandMore);
         toggleDropdown(showOthers);
     });
+    
+    // Change the icon of expand more o less in the dropdowns. 
+    function changeIconArrow(iconExpand) {
+        iconExpand.innerHTML === "expand_more" ? iconExpand.innerHTML = "expand_less" : iconExpand.innerHTML = "expand_more";
+    }
 
     // Activate the logic for cell phone or desktop, including if the screen is small.
     function activateLogic() {
@@ -121,21 +130,26 @@ let flagMainMenu = false,
         }
     }
     
-    //Main logic large devices.
+    // Main logic large devices.
     function logicLargeDevices(){
         
         // Show or hidden the content of the dropdowns.
         contentToLearn.addEventListener("mouseenter", function() { 
             toggleDropdown(showToLearn);
+            changeIconArrow(iconToLearnExpandMore);
         });
         showToLearn.addEventListener("mouseleave", function() {
             toggleDropdown(showToLearn);    
+            changeIconArrow(iconToLearnExpandMore);
         });
         contentOthers.addEventListener("mouseenter", function() {
             toggleDropdown(showOthers);
+            changeIconArrow(iconOthersExpandMore);
         });
         showOthers.addEventListener("mouseleave", function() {
-            toggleDropdown(showOthers);    
+            toggleDropdown(showOthers);
+            changeIconArrow(iconOthersExpandMore);
+
         });
 
         // Add and remove events for show or hidden the main menu.
@@ -153,19 +167,21 @@ let flagMainMenu = false,
         logicLargeDevices.events();
     }
 
-    //Main logic small devices.
+    // Main logic small devices.
     function logicSmallDevices() {
 
         //initialize variables.
         const headerCellPhone = document.querySelector('.header-cell-phone'),
             accordion = document.querySelector(".accordion-base"),
             iconList = document.querySelector(".menu-navegation"),
+            iconExpandMoreToLearn = document.querySelector(".accordion-base .i-to-learn-expand-more"),
+            iconExpandMoreOthers = document.querySelector(".accordion-base .i-others-expand-more"),
             contentToLearnPhone = document.querySelector(".accordion-base .content-to-learn"),
             showToLearnPhone = document.querySelector(".accordion-base .show-to-learn"),
             contentOthersPhone = document.querySelector(".accordion-base .content-others"),
             showOthersPhone = document.querySelector(".accordion-base .show-others"),
-            dropdownBase= document.querySelectorAll(".dropdown-base");
-
+            parentDropdown = document.querySelectorAll(".accordion-base .dropdown-parent");
+        
         let lastScrollYCell= window.scrollY; 
             flagAccordion = false,
             flagIcon = false;
@@ -195,15 +211,15 @@ let flagMainMenu = false,
 
             if (!flagIcon){
                 toggleAccordion();
-                changeIcon();
+                changeIconSidebar();
                 flagIcon = true;
             }else{
                 toggleAccordion();
-                changeIcon();
+                changeIconSidebar();
                 flagIcon = false;
             }
 
-            function changeIcon() {
+            function changeIconSidebar() {
                 iconList.classList.toggle("bi-list");
                 iconList.classList.toggle("bi-x");
             }
@@ -211,7 +227,7 @@ let flagMainMenu = false,
             document.addEventListener(eventType, function(event) {
                 if (! headerCellPhone.contains(event.target) && !accordion.contains(event.target) && !iconList.contains(event.target) && accordion.classList.contains("accordion-active")) {
                     toggleAccordion();
-                    changeIcon();
+                    changeIconSidebar();
                     flagIcon = false;
                 }
             });        
@@ -221,22 +237,29 @@ let flagMainMenu = false,
             accordion.classList.toggle("accordion-active");
         }
         
-        //Show or hidden the content of the dropdowns.
+        // Show or hidden the content of the dropdowns.
         const contentToLearnHandler = () => {
             toggleDropdown(showToLearnPhone);
             onlyDropdown(showToLearnPhone);
+            changeIconArrow(iconExpandMoreToLearn);
         };
         
         const contentOthersHandler = () => {
             toggleDropdown(showOthersPhone);
             onlyDropdown(showOthersPhone);
+            changeIconArrow(iconExpandMoreOthers);
         };
                     
         // Show only one dropdown at a time.
         function onlyDropdown(currentDropdown) {
-            dropdownBase.forEach(dropdown => {
-                if (dropdown !== currentDropdown && dropdown.classList.contains("dropdown-active")) {
-                    dropdown.classList.toggle("dropdown-active");
+            parentDropdown.forEach(dropdown => {
+                
+                const dropdownBase = dropdown.querySelector(".dropdown-base"),
+                      elementI = dropdown.querySelector("i");
+
+                if ( (dropdownBase && elementI) && (dropdownBase !== currentDropdown) && (dropdownBase.classList.contains("dropdown-active"))) {
+                    elementI.innerHTML = "expand_more";
+                    dropdownBase.classList.remove("dropdown-active");
                 }
             });
         }

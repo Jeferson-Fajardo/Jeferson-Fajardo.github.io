@@ -1,7 +1,10 @@
-<li class="list-style-none btn-learn" >
-    <button class="box-transparent {% if page.url contains '/to-learn/' %} color-option {% endif %} content-to-learn ">
-        To learn
-    </button>
+<li class="list-style-none btn-learn dropdown-parent" >
+    <div class="d-flex align-items-center content-to-learn {% if page.url contains '/to-learn/' %} color-option {% endif %} ">
+        <i class="material-icons i-to-learn-expand-more">expand_more</i>
+        <button class="box-transparent {% if page.url contains '/to-learn/' %} color-white {% endif %} ">
+             To learn
+        </button>
+    </div>
     <ul class="dropdown-to-learn dropdown-base show-to-learn" >
         <li class="dropdow-option px-3 ">
             <a {% unless page.url == '/to-learn/cibersecurity/' %} href="/to-learn/cibersecurity" {% endunless %} class="{% if page.url == '/to-learn/cibersecurity/' %} text-decoration-underline color-black-important {% endif %}">Cibersecurity</a>
@@ -15,18 +18,21 @@
     </ul>
 </li>
 
-<li class="list-style-none line-underline" >
-    <a {% unless page.url == '/words/' %} href="/words" {% endunless %} class="text-decoration-none color-black {% if page.url == '/words/'  %} d-block color-option  {% endif %}">Words</a>
+<li class="list-style-none line-underline a-option" >
+    <a {% unless page.url == '/words/' %} href="/words" {% endunless %} class="text-decoration-none color-black {% if page.url == '/words/'  %} color-option  {% endif %}">Words</a>
 </li>
 
-<li class="list-style-none" >
-    <button class="box-transparent {% if page.url contains '/others/' %} color-option {% endif %} content-others">
-        Others
-    </button>
-    <ul class=" dropdown-others  dropdown-base show-others" >
-        <li class="dropdow-option px-3 ">
-            <a {% unless page.url == '/others/phrases/' %} href="/others/phrases" {% endunless %} class="{% if page.url == '/others/phrases/' %} text-decoration-underline color-black-important {% endif %}">Phrases</a>
-        </li>
+<li class="list-style-none line-underline a-option">
+    <a {% unless page.url == '/phrases/' %} href="/phrases" {% endunless %}  class="text-decoration-none color-black {% if page.url == '/phrases/' %} color-option {% endif %}" >Phrases</a>
+</li>
+<li class="list-style-none dropdown-parent" >
+    <div class="d-flex align-items-center content-others {% if page.url contains '/others/' %} color-option {% endif %}">
+        <i class="material-icons i-others-expand-more  ">expand_more</i>
+        <button class="box-transparent  {% if page.url contains '/others/' %} color-white {% endif %}">
+            Others
+        </button>
+    </div>
+    <ul class=" dropdown-others dropdown-base show-others" >
         <li class="dropdow-option px-3">
             <a href="#">other option</a>
         </li>

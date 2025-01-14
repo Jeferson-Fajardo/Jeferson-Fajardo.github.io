@@ -5,6 +5,7 @@
 }
 
 /* widths */
+
 .w-full{
     width: 100%;
 }
@@ -13,7 +14,6 @@
 .h-full{
     height: 100%;
 }
-
 
 /* borders */
 
@@ -43,33 +43,41 @@
 }
 
 /* colors */
+
 .color-black{
     color: black;
+}
+.color-white{
+    color: white;
 }
 .color-black-important{
     color: black!important;
 }
 /* backgraound */
+
 .background-c-gray-102{
     background-color: rgb(102 102 102)!important;
 }
 
-
 /* padding */
-
-.pt-50px{
-    padding-top:50px;
-}
 
 .pt-100px{
     padding-top: 100px!important;
 }
+
 .pl-0_75rem{
     padding-left: 0.75rem;
 }
+.pl-6px{
+    padding-left: 6px;
+}
+/* margin */
 
-
+.mt-60px{
+    margin-top: 60px;
+}
 /* z-index */
+
 .z-index-1000{
     z-index: 1000;
 }
@@ -83,14 +91,21 @@
     text-decoration: none;
 }
 
-/* pxs */
-.h-35-px{
+/* height */
+
+.h-35px{
     height: 35px;
 }
 
 /* changes of bootstrapt */
-
 ol, ul {
     padding-left: 0rem;
 
+}
+
+/* properties for all pages*/
+
+body{
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
 }
