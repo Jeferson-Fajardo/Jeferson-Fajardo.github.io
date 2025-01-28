@@ -1,4 +1,5 @@
 *{
+    font-family: 'Roboto', sans-serif;
     box-sizing: border-box;
     padding: 0;
     margin: 0;
@@ -103,9 +104,3 @@ ol, ul {
 
 }
 
-/* properties for all pages*/
-
-body{
-    font-size: 18px;
-    font-family: 'Roboto', sans-serif;
-}

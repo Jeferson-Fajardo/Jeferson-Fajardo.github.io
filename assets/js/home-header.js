@@ -43,7 +43,7 @@ let flagMainMenu = false,
 
     // Show or hidden the main menu.  
     function showMenu(){
-        addSpace.classList.add("more-mt-120px");
+        addSpace.classList.add("more-mt-100px");
         navegationHeader.classList.add("navegation-header-active");
         webName.classList.add("web-name-shadow");
         logo.classList.remove("logo-gray-filter");
@@ -56,7 +56,7 @@ let flagMainMenu = false,
     }
     
     function hiddenMenu(){
-        addSpace.classList.remove("more-mt-120px");
+        addSpace.classList.remove("more-mt-100px");
         navegationHeader.classList.remove("navegation-header-active");
         webName.classList.remove("web-name-shadow");
         logo.classList.add("logo-gray-filter");
