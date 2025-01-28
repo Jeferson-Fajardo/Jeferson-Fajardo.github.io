@@ -145,7 +145,7 @@ ul {
 /* cell-phone */
 
 .header-cell-phone{
-    height: 56px;
+    height: 60px;
     background-color: snow;
     position: fixed;
 }
@@ -181,8 +181,8 @@ ul {
     max-height: 60vh;
     transition: max-height 1.5s linear; 
 }
-.more-mt-120px{
-    margin-top: 120px;
+.more-mt-100px{
+    margin-top: 100px;
 }
 /* changes boostrapt */
 
@@ -227,7 +227,7 @@ ul {
     }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 767px) {
    
     .header-cell-phone, .accordion-base{
         display: none!important;
