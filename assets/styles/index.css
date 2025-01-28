@@ -141,4 +141,8 @@ body{
   .Know-about-me{
     text-align: center;
   }
+  .more-mt-100px{
+    margin-top: 0;
+  }
+
 } 
