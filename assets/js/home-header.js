@@ -20,8 +20,10 @@ const showHeader = document.querySelector(".show-header"),
     showOthers = document.querySelector(".show-others"),
     contentOthers = document.querySelector(".content-others"),
     _switch = document.querySelectorAll(".switch"),
-    isTouch = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
-
+    isTouch = 'ontouchstart' in window || navigator.maxTouchPoints > 0,
+    hiddenBox = document.querySelector(".hidden-box"),
+    parentDropdownLargeDevices = document.querySelectorAll(".dropdown-parent");
+    
 let flagMainMenu = false,
     lastScrollY = window.scrollY,
     isSmallDevice = false,
@@ -34,11 +36,6 @@ let flagMainMenu = false,
         } else {
             return window.innerWidth <= 767;
         }
-    }
-  
-    //Functions reused.
-    function toggleDropdown(showDropdown){
-        showDropdown.classList.toggle("dropdown-active");
     }
 
     // Show or hidden the main menu.  
@@ -65,7 +62,6 @@ let flagMainMenu = false,
         linesHeader.forEach(lineHeader => {
             lineHeader.classList.remove("lines-color-bold","box-shadow-lines-circle");
         });
-
         window.addEventListener("scroll", scrollHandler);
     }
 
@@ -98,21 +94,26 @@ let flagMainMenu = false,
     // Events of click or touchstart for show the dropdowns.
     contentToLearn.addEventListener(eventType, function() {
         changeIconArrow(iconToLearnExpandMore);
-        toggleDropdown(showToLearn);
+        toggleHiddenBox(showToLearn);
+        onlyDropdown(showToLearn , parentDropdownLargeDevices);
     });
     contentOthers.addEventListener(eventType, function() {
         changeIconArrow(iconOthersExpandMore);
-        toggleDropdown(showOthers);
+        toggleHiddenBox(showOthers);
+        onlyDropdown(showOthers, parentDropdownLargeDevices);
     });
-    
+ 
     // Change the icon of expand more o less in the dropdowns. 
     function changeIconArrow(iconExpand) {
         iconExpand.innerHTML === "expand_more" ? iconExpand.innerHTML = "expand_less" : iconExpand.innerHTML = "expand_more";
     }
+    // Show or hidden the dropdowns.
+    function toggleHiddenBox(ShowDropdown) {
+        ShowDropdown.classList.toggle("hidden-box-active");
+    }
 
     // Activate the logic for cell phone or desktop, including if the screen is small.
     function activateLogic() {
-
         const smallScreen = isSmallScreen();
         
         if (smallScreen) {
@@ -130,26 +131,40 @@ let flagMainMenu = false,
         }
     }
     
+    // Show only one dropdown at a time.
+    function onlyDropdown(currentDropdown, parentDropdown) {
+        parentDropdown.forEach(dropdown => {
+            const box = dropdown.querySelector(".hidden-box"),
+                  elementI = dropdown.querySelector("i");
+
+            if ((box && elementI) && (box !== currentDropdown) && (box.classList.contains("hidden-box-active"))) {
+                elementI.innerHTML = "expand_more";
+                box.classList.remove("hidden-box-active");
+            }
+        });
+    }
+
     // Main logic large devices.
     function logicLargeDevices(){
         
         // Show or hidden the content of the dropdowns.
         contentToLearn.addEventListener("mouseenter", function() { 
-            toggleDropdown(showToLearn);
+            toggleHiddenBox(showToLearn);
             changeIconArrow(iconToLearnExpandMore);
+            onlyDropdown(showToLearn,parentDropdownLargeDevices);
         });
         showToLearn.addEventListener("mouseleave", function() {
-            toggleDropdown(showToLearn);    
             changeIconArrow(iconToLearnExpandMore);
+            toggleHiddenBox(showToLearn);
         });
         contentOthers.addEventListener("mouseenter", function() {
-            toggleDropdown(showOthers);
+            toggleHiddenBox(showOthers);
             changeIconArrow(iconOthersExpandMore);
+            onlyDropdown(showOthers,parentDropdownLargeDevices);
         });
         showOthers.addEventListener("mouseleave", function() {
-            toggleDropdown(showOthers);
+            toggleHiddenBox(showOthers);
             changeIconArrow(iconOthersExpandMore);
-
         });
 
         // Add and remove events for show or hidden the main menu.
@@ -157,12 +172,11 @@ let flagMainMenu = false,
             showHeader.addEventListener("mouseenter", showMenu);
             boxHeader.addEventListener("mouseleave", hiddenMenu); 
         }
-
         logicLargeDevices.removeEvents = () => {
             showHeader.removeEventListener("mouseenter", showMenu);
             boxHeader.removeEventListener("mouseleave", hiddenMenu);
         }
-
+        
         // Initizalize the functions. 
         logicLargeDevices.events();
     }
@@ -180,9 +194,9 @@ let flagMainMenu = false,
             showToLearnPhone = document.querySelector(".accordion-base .show-to-learn"),
             contentOthersPhone = document.querySelector(".accordion-base .content-others"),
             showOthersPhone = document.querySelector(".accordion-base .show-others"),
-            parentDropdown = document.querySelectorAll(".accordion-base .dropdown-parent");
+            parentDropdownSmallDevices = document.querySelectorAll(".accordion-base .dropdown-parent");
         
-        let lastScrollYCell= window.scrollY; 
+        let lastScrollYCell= window.scrollY;
             flagAccordion = false,
             flagIcon = false;
 
@@ -239,31 +253,17 @@ let flagMainMenu = false,
         
         // Show or hidden the content of the dropdowns.
         const contentToLearnHandler = () => {
-            toggleDropdown(showToLearnPhone);
-            onlyDropdown(showToLearnPhone);
+            toggleHiddenBox(showToLearnPhone);
+            onlyDropdown(showToLearnPhone , parentDropdownSmallDevices);
             changeIconArrow(iconExpandMoreToLearn);
         };
         
         const contentOthersHandler = () => {
-            toggleDropdown(showOthersPhone);
-            onlyDropdown(showOthersPhone);
+            toggleHiddenBox(showOthersPhone);
+            onlyDropdown(showOthersPhone , parentDropdownSmallDevices);  
             changeIconArrow(iconExpandMoreOthers);
         };
-                    
-        // Show only one dropdown at a time.
-        function onlyDropdown(currentDropdown) {
-            parentDropdown.forEach(dropdown => {
                 
-                const dropdownBase = dropdown.querySelector(".dropdown-base"),
-                      elementI = dropdown.querySelector("i");
-
-                if ( (dropdownBase && elementI) && (dropdownBase !== currentDropdown) && (dropdownBase.classList.contains("dropdown-active"))) {
-                    elementI.innerHTML = "expand_more";
-                    dropdownBase.classList.remove("dropdown-active");
-                }
-            });
-        }
-
         // Add events.
         window.addEventListener('scroll', scrollHandlerCell);
         iconList.addEventListener(eventType, iconClickHandler);

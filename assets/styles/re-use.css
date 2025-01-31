@@ -62,8 +62,13 @@
 
 /* padding */
 
-.pt-100px{
-    padding-top: 100px!important;
+.py-5px{
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.pl-0{
+    padding-left: 0;
 }
 
 .pl-0_75rem{
@@ -72,6 +77,15 @@
 .pl-6px{
     padding-left: 6px;
 }
+
+.pt-100px{
+    padding-top: 100px!important;
+}
+
+.pl-1rem{
+    padding-left: 1rem;
+}
+
 /* margin */
 
 .mt-60px{
@@ -101,6 +115,5 @@
 /* changes of bootstrapt */
 ol, ul {
     padding-left: 0rem;
-
 }
 

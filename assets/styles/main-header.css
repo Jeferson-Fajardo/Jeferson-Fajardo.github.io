@@ -2,7 +2,6 @@
 
 ul {
     margin-bottom: 0;
-    padding-left: 1rem;
 }
 .box-header.hidden{
     transform: translateY(-100%); 
@@ -95,24 +94,26 @@ ul {
     text-decoration: gray;
     text-underline-offset: 4px;
 }
-.dropdown-base{
+.hidden-box{
     opacity: 0;
     visibility: hidden;
-    background-color: snow;
+    max-height: 0;
     position: absolute;
+    transition: opacity 0.5s ease, max-height 0.5s ease;
+}
+.hidden-box-active{
+    opacity: 1;
+    visibility: visible;  
+    max-height: 500px;
+}
+.dropdown-base{ 
+    background-color: snow;
     height: auto;
     width: auto;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px; 
-    list-style: none;
+    border-radius: 10px;
     padding-left: 0;
     padding-top: 5px;
     padding-bottom: 10px;
-    border-left: 3px solid black;
-    border-right: 3px solid black;
-    border-bottom: 3px solid black;
-    max-height: 0;
-    overflow-y: hidden;  
 }
 .dropdown-base a{
     color: rgb(70, 70, 70);
@@ -127,19 +128,28 @@ ul {
 .dropdow-option:hover a{
     color: white!important;
 }
-.dropdown-to-learn{
+.show-to-learn{
+    top: 43px;
+    left: 50px;
+}
+.show-others{
     top: 41.8px;
-    left: 108px;
+    left: 350px;
+}
+.dropdown-to-learn{
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    grid-template-rows: auto ;
+    gap: 10px;
+    padding: 36px 23px 36px;
 }
 .dropdown-others{
-    top: 41.8px;
-    left: 358px;
+    padding-top: 15px;
+    margin-top: 20px;
 }
-.dropdown-active{
-    visibility: visible;
-    opacity: 1;
-    max-height: 100vh;
-    transition: max-height 1.5s linear; 
+.icon-article{
+    height: 64px;
 }
 
 /* cell-phone */
@@ -188,17 +198,27 @@ ul {
 
 /* @media's */
 
+@media screen and (max-width:576px) {
+    
+    .icon-article{
+        display: none;
+    }
+    .ms-pl-10px{
+        padding-left: 10px;
+    }
+}
+
 @media screen and (max-width: 767px) {
     
-    .box-header {
-        display: none;
+    .box-header, .category-four, .category-five, .category-six{
+        display: none!important;
     }
     .secondary-list-header{
         width: auto;
         padding-left: 0rem;
     }
     .dropdown-to-learn, .dropdown-others{
-        padding-top: 10px;
+        margin-top: 0px;
         position: fixed;
         left: auto; 
     }
@@ -225,6 +245,10 @@ ul {
     .a-option{
         padding-left: 6px;
     }
+    .dropdown-to-learn{
+        grid-template-columns: 1fr;
+    }
+
 }
 
 @media screen and (min-width: 767px) {
