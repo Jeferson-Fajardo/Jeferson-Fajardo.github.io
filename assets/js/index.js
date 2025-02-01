@@ -10,7 +10,9 @@
 // global variables
 const textarea = document.querySelector('.textarea-search'),
       clearIcon = document.querySelector('.clear-icon'),
-      searchIcon = document.querySelector('.search-icon');
+      searchIcon = document.querySelector('.search-icon'),
+      knowAboutMe = document.querySelector('.know-about-me'),
+      moreAboutMe = document.querySelector(".more-about-me");
 let isTabPressed = false;
 
 //call functions
@@ -68,6 +70,11 @@ textarea.addEventListener('input', function() {
     } else {
         clearIcon.classList.add('d-none');
     }
+});
+
+//Show or hidden the content about me with a click. 
+knowAboutMe.addEventListener('click', function() {
+    moreAboutMe.classList.toggle("d-none"); 
 });
 
 // Change the placeholder text size depending on the screen size.

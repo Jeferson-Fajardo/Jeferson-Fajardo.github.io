@@ -114,6 +114,11 @@
     height: 35px;
 }
 
+/* cursor  */
+.cursor-pointer{
+    cursor: pointer;
+}
+
 /* changes of bootstrapt */
 ol, ul {
     padding-left: 0rem;

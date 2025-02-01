@@ -116,10 +116,10 @@ body{
   .search-icon{
     font-size: 43px;
   }
-
   .clear-icon{
     padding: 10px;
   }
+
 
  @media screen and (max-width: 767px) { 
   .ms-d-block, main{
@@ -138,7 +138,7 @@ body{
     width: 138px;
     height: 150px;
   }
-  .Know-about-me{
+  .know-about-me{
     text-align: center;
   }
   .more-mt-100px{
