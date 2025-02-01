@@ -81,7 +81,9 @@
 .pt-100px{
     padding-top: 100px!important;
 }
-
+.pl-15px{
+    padding-left: 15px;
+}
 .pl-1rem{
     padding-left: 1rem;
 }

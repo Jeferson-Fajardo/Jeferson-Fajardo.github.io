@@ -192,7 +192,7 @@
                 <a href="#">Configuracion</a>
             </li>
             <li class="dropdow-option px-3">
-                <a href="#">Creditos</a>
+                <a {% unless page.url == '/others/credits/' %} href="/others/credits" {% endunless %}  class="{% if page.url == '/others/credits/' %} text-decoration-underline color-black-important {% endif %}">Créditos</a>
             </li>
             <li class="dropdow-option px-3">
                 <a href="#">lorem lorem lorem</a>
