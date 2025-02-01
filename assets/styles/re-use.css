@@ -118,6 +118,10 @@
 .cursor-pointer{
     cursor: pointer;
 }
+/* font size */
+.font-size-20px{
+    font-size: 22px;
+}
 
 /* changes of bootstrapt */
 ol, ul {

@@ -1,7 +1,7 @@
 /**
  *  File: index.js
  *  Description:This file manages the behavior of the textarea search input, 
- *              including dynamic placeholder resizing, clear button functionality, 
+ *              including dynamic placeholder resizing, show or hidden the content about me, clear button functionality, 
  *              and user input handling. Future functionality will include Firebase search integration.
  *
  *  Dependencies: None. 
@@ -13,7 +13,8 @@ const textarea = document.querySelector('.textarea-search'),
       searchIcon = document.querySelector('.search-icon'),
       knowAboutMe = document.querySelector('.know-about-me'),
       moreAboutMe = document.querySelector(".more-about-me");
-let isTabPressed = false;
+let isTabPressed = false,
+    flagAboutMe = false;  
 
 //call functions
 changeTextSize();
@@ -74,7 +75,17 @@ textarea.addEventListener('input', function() {
 
 //Show or hidden the content about me with a click. 
 knowAboutMe.addEventListener('click', function() {
-    moreAboutMe.classList.toggle("d-none"); 
+    const labelB = knowAboutMe.querySelector("b"); 
+    if (!flagAboutMe){
+        labelB.innerHTML = "! Conoce menos sobre mí ! "
+        flagAboutMe = true;
+    }else{
+        labelB.innerHTML = "! Conoce más sobre mí ! "
+        flagAboutMe = false;
+        
+    }
+    moreAboutMe.classList.toggle("d-none");
+    moreAboutMe.classList.toggle("d-flex"); 
 });
 
 // Change the placeholder text size depending on the screen size.
