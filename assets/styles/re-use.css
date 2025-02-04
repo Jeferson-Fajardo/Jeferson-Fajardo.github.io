@@ -66,6 +66,10 @@
     padding-top: 5px;
     padding-bottom: 5px;
 }
+.px-10px{
+    padding-left: 10px;
+    padding-right: 10px;
+}
 
 .pl-0{
     padding-left: 0;
@@ -122,6 +126,8 @@
 .font-size-20px{
     font-size: 22px;
 }
+
+
 
 /* changes of bootstrapt */
 ol, ul {

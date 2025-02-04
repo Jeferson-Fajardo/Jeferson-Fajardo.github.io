@@ -119,17 +119,62 @@ body{
   .clear-icon{
     padding: 10px;
   }
-  .more-about-me{
-    width: 100%;
-  }
   .experience-container{
-    padding-left: 10px;
-    padding-right: 10px;
-    width: 903px;
     height: 300px;
+    width: 100%;
   }
   .content-experience{
     padding: 10px;
+  }
+  .projects-container{
+    height:490px;
+    width: 100%;
+    padding: 10px;
+  }
+  .carousel-container{
+    height: 445px; 
+    } 
+  .carousel-card{
+    background-color: rgb(189, 147, 249);
+    width: 260px;
+    height: 380px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+  .bi-arrow-left-circle-fill,.bi-arrow-right-circle-fill{
+    font-size: 50px;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  .project-title{
+    border-radius: 10px;
+    padding: 5px 10px 5px 10px;
+    background-color: rgb(189, 147, 249);
+    width: max-content;
+    position: relative;
+    left: -5%;
+    top: -6%;
+  }
+  .project-image{
+    height: 180px;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .card-description{
+    border-top: 1px solid black;
+    height: 130px;
+  }
+  .card-description p{
+    margin-bottom: 0;
+    padding: 0px 8px 0px 8px;
+  }
+  .card-technologies{
+    padding: 5px;
+    height: auto;
+    font-size: 33px;
+  }
+  .technology-icon{
+    height: 30px;
   }
 
  @media screen and (max-width: 767px) { 
