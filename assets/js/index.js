@@ -1,23 +1,30 @@
 /**
  *  File: index.js
- *  Description:This file manages the behavior of the textarea search input, 
- *              including dynamic placeholder resizing, show or hidden the content about me, clear button functionality, 
- *              and user input handling. Future functionality will include Firebase search integration.
+ *  Description: This file manages the behavior of the textarea search input , including:
+ *      
+ *      -Dynamic placeholder resizing.
+ *      -Show or hide the content about me, assign dynamically the images with its animation to each card.
+ *      -Clear input of the button.
+ *      -Show and clear the animations of each card and user input handling.
+ *      -Future functionality will include Firebase search integration.
  *
- *  Dependencies: None. 
+ *  Dependencies: 
+ *       - styles/index.css : Provides the CSS classes used for styles. 
  *     
 */
-// global variables
+// Global variables
 const textarea = document.querySelector('.textarea-search'),
       clearIcon = document.querySelector('.clear-icon'),
       searchIcon = document.querySelector('.search-icon'),
       knowAboutMe = document.querySelector('.know-about-me'),
-      moreAboutMe = document.querySelector(".more-about-me");
+      moreAboutMe = document.querySelector(".more-about-me"),
+      projectImages = document.querySelectorAll('.project-image');
 let isTabPressed = false,
     flagAboutMe = false;  
 
-//call functions
+//Call functions
 changeTextSize();
+addEventsCards();
 
 // Detect if the user is pressing the "Tab" key.
 document.addEventListener('keydown', function(event) {
@@ -73,7 +80,7 @@ textarea.addEventListener('input', function() {
     }
 });
 
-//Show or hidden the content about me with a click. 
+//Show or hide the content about me with a click. 
 knowAboutMe.addEventListener('click', function() {
     const labelB = knowAboutMe.querySelector("b"); 
     if (!flagAboutMe){
@@ -82,13 +89,12 @@ knowAboutMe.addEventListener('click', function() {
     }else{
         labelB.innerHTML = "! Conoce más sobre mí ! "
         flagAboutMe = false;
-        
     }
     moreAboutMe.classList.toggle("d-none");
     moreAboutMe.classList.toggle("d-flex"); 
 });
 
-// Change the placeholder text size depending on the screen size.
+//Change the placeholder text size depending on the screen size.
 function changeTextSize() {
     if(window.innerWidth  < 500){
         textarea.setAttribute('placeholder', 'Articulos o pensamientos. ');
@@ -99,4 +105,24 @@ function changeTextSize() {
     }
 }
 
+//Select the all images of the projects and assign them the url to each property img for its animation in each card.
+projectImages.forEach(card => {
+    let basePath = "https://murasaki-dbd90.web.app/images/projects/";
+    card.style.setProperty('--img1', `url(${basePath + card.dataset.img1})`);
+    card.style.setProperty('--img2', `url(${basePath + card.dataset.img2})`);
+    card.style.setProperty('--img3', `url(${basePath + card.dataset.img3})`);
+});
 
+// Show and clear the animation of each card with a event of click.
+function addEventsCards() {
+    projectImages.forEach(card => {
+        card.addEventListener('click', () => animationHandler(card), {once: true}); 
+    });    
+}
+function animationHandler(card) {  
+    toggleAnimation(card);
+    setTimeout(() => toggleAnimation(card), 3000);
+}
+function toggleAnimation(card) {
+    card.classList.toggle("project-image-click");
+}
