@@ -17,8 +17,11 @@ const textarea = document.querySelector('.textarea-search'),
       clearIcon = document.querySelector('.clear-icon'),
       searchIcon = document.querySelector('.search-icon'),
       knowAboutMe = document.querySelector('.know-about-me'),
-      moreAboutMe = document.querySelector(".more-about-me"),
-      projectImages = document.querySelectorAll('.project-image');
+      moreAboutMe = document.querySelector('.more-about-me'),
+      projectImages = document.querySelectorAll('.project-image'),
+      cards = document.querySelectorAll('.carousel-card'),
+      cardsContent = document.querySelector('.carousel-cards-content');
+
 let isTabPressed = false,
     flagAboutMe = false;  
 
@@ -90,8 +93,8 @@ knowAboutMe.addEventListener('click', function() {
         labelB.innerHTML = "! Conoce más sobre mí ! "
         flagAboutMe = false;
     }
-    moreAboutMe.classList.toggle("d-none");
-    moreAboutMe.classList.toggle("d-flex"); 
+    moreAboutMe.classList.toggle("show");
+   ; 
 });
 
 //Change the placeholder text size depending on the screen size.
@@ -119,10 +122,48 @@ function addEventsCards() {
         card.addEventListener('click', () => animationHandler(card), {once: true}); 
     });    
 }
-function animationHandler(card) {  
+function animationHandler(card) {
     toggleAnimation(card);
     setTimeout(() => toggleAnimation(card), 3000);
 }
 function toggleAnimation(card) {
     card.classList.toggle("project-image-click");
 }
+
+document.addEventListener("DOMContentLoaded", function () { 
+
+    const prevArrow = document.querySelector('.glide__arrow--left');
+    const nextArrow = document.querySelector('.glide__arrow--right');
+
+    // Attributes of glide for the carousel.
+    const glide = new Glide('.glide', {
+        type: 'carousel',
+        perView: 3,
+        gap: 20,
+        startAt: 0,
+        breakpoints: {
+            768: { perView: 2 },
+            578: { perView: 1 }
+        }
+    });
+
+    //mount the carousel
+    glide.mount();
+    // glide.go(0);
+
+    //Events of glide for move the cards of the carousel
+    prevArrow.addEventListener('click', () => {
+        glide.go('<');
+        console.log("debio ir hacia atras");
+        
+    });
+    
+    nextArrow.addEventListener('click', () => {
+        glide.go('>');
+        console.log("debio ir hacia delante");
+
+    });
+
+});
+    console.log("debio mostrar 3 o iniciar glide");
+

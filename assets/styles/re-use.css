@@ -114,6 +114,10 @@
 
 /* height */
 
+.h-0{
+    height: 0;
+}
+
 .h-35px{
     height: 35px;
 }

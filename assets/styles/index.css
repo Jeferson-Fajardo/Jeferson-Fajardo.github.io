@@ -2,9 +2,7 @@ body{
     height: auto;
     padding-bottom: 150px;
 }
-.main-index{
-   display: flex;
-}
+
 .info-about-me{
     margin-top: 62px; 
 }
@@ -127,25 +125,33 @@ body{
     padding: 10px;
   }
   .projects-container{
-    height: 515px;
-    width: 100%;
+    height: 515px; 
     padding: 10px 10px 0px 10px;
-    
   }
-  .carousel-container{
-    height: 453px; 
-    } 
+
+  .carousel-container{ 
+    max-width: 800px; 
+    width: 85%!important;
+  }  
+
+  .carousel-slides{
+    height: 450px; 
+    padding-left: 16px!important; 
+    gap: 20px;
+  }
+
   .carousel-card{
     background-color: rgb(189, 147, 249);
-    width: 260px;
-    height: 380px;
+    height: 380px !important;
+    border-top-left-radius: 10px;
     border-bottom-right-radius: 10px;
     border-bottom-left-radius: 10px;
+    margin: 0 !important;
+    
   }
   .bi-arrow-left-circle-fill,.bi-arrow-right-circle-fill{
-    font-size: 50px;
-    padding-left: 5px;
-    padding-right: 5px;
+    font-size: 40px;
+    padding: 5px;
   }
   .project-title{
     border-radius: 10px;
@@ -154,16 +160,20 @@ body{
     width: max-content;
     position: relative;
     left: -5%;
-    top: -6%;
+    top: 5%;
+  }
+  .project-title:hover{
+    text-decoration: underline;
   }
   .project-image{
+    border-top-left-radius: 10px;
     height: 180px;
     background-repeat: no-repeat;
     background-size: cover;
     background-image: var(--img1);
     transition: background-image 0.5s ease-in-out;
   }
-  .project-image:hover , .project-image-click {
+  .project-image:hover, .project-image-click {
     animation: changeImages 3s linear infinite ;
   }
   
@@ -173,7 +183,6 @@ body{
     66.66% { background-image: var(--img3); }
     100% { background-image: var(--img1); }
   }
-
   .card-description{
     border-top: 1px solid black;
     height: 130px;
@@ -190,10 +199,26 @@ body{
   .technology-icon{
     height: 30px;
   }
+  .more-about-me{
+    width: 900px;
+    visibility: hidden;
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+    /* transition: opacity 0.5s ease-in-out, height 0.5s ease-in-out; */
+  }
+  .more-about-me.show {
+    visibility: visible;
+    opacity: 1;
+    height: auto; 
+  }
 
 
-
-
+ @media screen and (max-width: 1250px) {
+  .more-about-me{
+    width: 100%!important;
+  }
+ } 
  @media screen and (max-width: 767px) { 
   .ms-d-block, main{
     display: block!important;
@@ -220,5 +245,14 @@ body{
   .experience-container{
     height: auto;
   }
+  .mt-60px{
+    margin-top: 0px;
+  }
 
 } 
+@media screen and (max-width: 578px)  { 
+
+  .glide{
+    width: 80%!important;
+  }
+}
