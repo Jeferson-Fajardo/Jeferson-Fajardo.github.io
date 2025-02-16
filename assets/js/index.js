@@ -20,7 +20,9 @@ const textarea = document.querySelector('.textarea-search'),
       moreAboutMe = document.querySelector('.more-about-me'),
       projectImages = document.querySelectorAll('.project-image'),
       cards = document.querySelectorAll('.carousel-card'),
-      cardsContent = document.querySelector('.carousel-cards-content');
+      cardsContent = document.querySelector('.carousel-cards-content'),
+      prevArrow = document.querySelector('.glide__arrow--left'),
+      nextArrow = document.querySelector('.glide__arrow--right');
 
 let isTabPressed = false,
     flagAboutMe = false;  
@@ -130,40 +132,25 @@ function toggleAnimation(card) {
     card.classList.toggle("project-image-click");
 }
 
-document.addEventListener("DOMContentLoaded", function () { 
-
-    const prevArrow = document.querySelector('.glide__arrow--left');
-    const nextArrow = document.querySelector('.glide__arrow--right');
-
-    // Attributes of glide for the carousel.
-    const glide = new Glide('.glide', {
-        type: 'carousel',
-        perView: 3,
-        gap: 20,
-        startAt: 0,
-        breakpoints: {
-            768: { perView: 2 },
-            578: { perView: 1 }
-        }
-    });
-
-    //mount the carousel
-    glide.mount();
-    // glide.go(0);
-
-    //Events of glide for move the cards of the carousel
-    prevArrow.addEventListener('click', () => {
-        glide.go('<');
-        console.log("debio ir hacia atras");
-        
-    });
-    
-    nextArrow.addEventListener('click', () => {
-        glide.go('>');
-        console.log("debio ir hacia delante");
-
-    });
-
+// Attributes of glide for the carousel.
+const glide = new Glide('.glide', {
+    type: 'carousel',
+    perView: 3,
+    gap: 20,
+    startAt: 0,
+    breakpoints: {
+        768: { perView: 2 },
+        578: { perView: 1 }
+    }
 });
-    console.log("debio mostrar 3 o iniciar glide");
 
+//mount the carousel
+glide.mount();
+
+//Events of glide for move the cards of the carousel
+prevArrow.addEventListener('click', () => {
+    glide.go('<');
+});
+nextArrow.addEventListener('click', () => {
+    glide.go('>');
+});
