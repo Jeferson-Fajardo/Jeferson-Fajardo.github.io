@@ -200,6 +200,7 @@ body{
   height: 0;
   overflow: hidden;
   transition: opacity 0.5s ease-in-out, height 0.5s ease-in-out;
+  gap: 15px;
 }
 .more-about-me.show {
   visibility: visible;
@@ -235,7 +236,28 @@ body{
   border: 1px solid black;
   border-radius: 26px;
 }
-
+.certification-content{
+    grid-template-columns: 1fr 1fr ;
+    grid-template-rows: auto ;
+    gap: 15px;
+}
+.certificate{
+  background-color: rgba(198, 198, 198, 0.39);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  background-image: url('https://murasaki-dbd90.web.app/images/random/certificate.webp');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: calc(100% - 20px) bottom;
+}
+.certificate:hover{
+  background-color: rgba(199, 199, 199, 0.49);
+}
+.more-certitications:hover{
+  color: black;
+}
 @media screen and (max-width: 1250px) {
 .more-about-me{
   width: 100%!important;
@@ -322,4 +344,10 @@ body{
 .content-soft-skills{
   gap: 10px;
 }
+.certification-content{
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
 }
+ 
+}
+

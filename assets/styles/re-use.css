@@ -14,10 +14,6 @@
     width: 50%;
 }
 
-/* heigths */
-.h-full{
-    height: 100%;
-}
 
 /* borders */
 
@@ -105,6 +101,10 @@
 .mt-60px{
     margin-top: 60px;
 }
+
+.mb-0px{
+    margin-bottom: 0px;
+}
 /* z-index */
 
 .z-index-1000{
@@ -125,10 +125,13 @@
 .h-0{
     height: 0;
 }
-
 .h-35px{
     height: 35px;
 }
+.h-full{
+    height: 100%;
+}
+
 
 /* cursor  */
 .cursor-pointer{
@@ -138,7 +141,6 @@
 .font-size-20px{
     font-size: 22px;
 }
-
 
 
 /* changes of bootstrapt */
