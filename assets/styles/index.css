@@ -236,10 +236,10 @@ body{
   border: 1px solid black;
   border-radius: 26px;
 }
-.certification-content{
-    grid-template-columns: 1fr 1fr ;
-    grid-template-rows: auto ;
-    gap: 15px;
+.certification-content, .contact-me-content{
+  grid-template-columns: 1fr 1fr ;
+  grid-template-rows: auto ;
+  gap: 15px;
 }
 .certificate{
   background-color: rgba(198, 198, 198, 0.39);
@@ -258,6 +258,23 @@ body{
 .more-certitications:hover{
   color: black;
 }
+.bi-copy{
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background: transparent;
+  color: transparent;
+}
+.contact-me-box-hover{
+  border-radius: 10px;
+  border: 1px solid black;
+}
+.bi-copy-hover{
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background: rgb(200, 198, 198);
+  color: black; 
+}
+
 @media screen and (max-width: 1250px) {
 .more-about-me{
   width: 100%!important;
@@ -328,6 +345,10 @@ body{
 }
 .content-soft-skills{
   gap: 27px;
+}
+.contact-me-content{
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
 }
 }
 

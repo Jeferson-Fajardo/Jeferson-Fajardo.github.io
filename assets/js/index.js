@@ -6,6 +6,8 @@
  *      -Show or hide the content about me, assign dynamically the images with its animation to each card.
  *      -Clear input of the button.
  *      -Show and clear the animations of each card and user input handling.
+ *      -Carousel glide functionality.
+ *      -Copy to clipboard functionality.
  *      -Future functionality will include Firebase search integration.
  *
  *  Dependencies: 
@@ -22,7 +24,9 @@ const textarea = document.querySelector('.textarea-search'),
       cards = document.querySelectorAll('.carousel-card'),
       cardsContent = document.querySelector('.carousel-cards-content'),
       prevArrow = document.querySelector('.glide__arrow--left'),
-      nextArrow = document.querySelector('.glide__arrow--right');
+      nextArrow = document.querySelector('.glide__arrow--right'),
+      contactMeBoxes = document.querySelectorAll(".contact-me-box");
+    
 
 let isTabPressed = false,
     flagAboutMe = false;  
@@ -154,3 +158,35 @@ prevArrow.addEventListener('click', () => {
 nextArrow.addEventListener('click', () => {
     glide.go('>');
 });
+// Copy to clipboard functionality
+contactMeBoxes.forEach(box => {
+    let i = box.querySelector("i"),
+        a = box.querySelector("a");
+
+    const toggleHoverState = (isHovering) => {
+        if (isHovering) {
+            i.classList.add("bi-copy-hover");
+            box.classList.add("contact-me-box-hover");
+            a.classList.remove("text-decoration-none");
+        } else {
+            i.classList.remove("bi-copy-hover");
+            box.classList.remove("contact-me-box-hover");
+            a.classList.add("text-decoration-none");
+        }
+    };
+    box.addEventListener("mouseenter", () => toggleHoverState(true));
+    box.addEventListener("mouseleave", () => toggleHoverState(false));
+    i.addEventListener("click", () => copyText(box, i));
+});
+function copyText(box, i) {
+    let text = box.querySelector("span").textContent.trim();
+    navigator.clipboard.writeText(text)
+    .then(() => {
+        i.classList.replace("bi-copy", "bi-check");
+        setTimeout(() => i.classList.replace("bi-check", "bi-copy"), 3000);
+    }).catch(err => console.error("Error al copiar: ", err));
+}
+
+
+
+

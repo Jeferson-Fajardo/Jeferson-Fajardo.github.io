@@ -22,6 +22,9 @@
     border-right: 0;
     border-bottom: 0;
 }
+.border-transparent-1px{
+    border: 1px solid transparent;
+}
 
 /* border-color */
 
@@ -141,7 +144,10 @@
 .font-size-20px{
     font-size: 22px;
 }
-
+/*gap*/
+.gap-10px{
+    gap: 10px;
+}
 
 /* changes of bootstrapt */
 ol, ul {
