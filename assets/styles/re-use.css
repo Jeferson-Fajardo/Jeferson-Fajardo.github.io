@@ -10,11 +10,10 @@
 .w-full{
     width: 100%;
 }
-
-/* heigths */
-.h-full{
-    height: 100%;
+.w-middle{
+    width: 50%;
 }
+
 
 /* borders */
 
@@ -22,6 +21,9 @@
     border-left: 0;
     border-right: 0;
     border-bottom: 0;
+}
+.border-transparent-1px{
+    border: 1px solid transparent;
 }
 
 /* border-color */
@@ -44,7 +46,6 @@
 }
 
 /* colors */
-
 .color-black{
     color: black;
 }
@@ -55,13 +56,15 @@
     color: black!important;
 }
 /* backgraound */
-
 .background-c-gray-102{
     background-color: rgb(102 102 102)!important;
 }
 
 /* padding */
 
+.p-10px{
+    padding: 10px;
+}
 .py-5px{
     padding-top: 5px;
     padding-bottom: 5px;
@@ -94,8 +97,16 @@
 
 /* margin */
 
+.m-10px{
+    margin: 10px;
+}
+
 .mt-60px{
     margin-top: 60px;
+}
+
+.mb-0px{
+    margin-bottom: 0px;
 }
 /* z-index */
 
@@ -117,10 +128,13 @@
 .h-0{
     height: 0;
 }
-
 .h-35px{
     height: 35px;
 }
+.h-full{
+    height: 100%;
+}
+
 
 /* cursor  */
 .cursor-pointer{
@@ -130,8 +144,10 @@
 .font-size-20px{
     font-size: 22px;
 }
-
-
+/*gap*/
+.gap-10px{
+    gap: 10px;
+}
 
 /* changes of bootstrapt */
 ol, ul {
