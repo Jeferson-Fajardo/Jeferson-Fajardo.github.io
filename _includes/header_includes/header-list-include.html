@@ -2,7 +2,7 @@
     <div class="d-flex align-items-center content-to-learn {% if page.url contains '/to-learn/' %} color-option {% endif %} ">
         <i class="material-icons i-to-learn-expand-more">expand_more</i>
         <button class="box-transparent {% if page.url contains '/to-learn/' %} color-white {% endif %} ">
-             To learn
+             Aprender 
         </button>
     </div>
     <div class="hidden-box show-to-learn ">
@@ -173,23 +173,23 @@
     </div>
 </li>
 <li class="list-style-none line-underline a-option" >
-    <a {% unless page.url == '/words/' %} href="/words" {% endunless %} class="text-decoration-none color-black {% if page.url == '/words/'  %} color-option  {% endif %}">Words</a>
+    <a {% unless page.url == '/words/' %} href="/words" {% endunless %} class="text-decoration-none color-black {% if page.url == '/words/'  %} color-option  {% endif %}">Palabras</a>
 </li>
 <li class="list-style-none line-underline a-option">
-    <a {% unless page.url == '/phrases/' %} href="/phrases" {% endunless %}  class="text-decoration-none color-black {% if page.url == '/phrases/' %} color-option {% endif %}" >Phrases</a>
+    <a {% unless page.url == '/phrases/' %} href="/phrases" {% endunless %}  class="text-decoration-none color-black {% if page.url == '/phrases/' %} color-option {% endif %}" >Frases</a>
 </li>
 <li class="list-style-none dropdown-parent" >
     <div class="d-flex align-items-center content-others {% if page.url contains '/others/' %} color-option {% endif %}">
         <i class="material-icons i-others-expand-more  ">expand_more</i>
         <button class="box-transparent  {% if page.url contains '/others/' %} color-white {% endif %}">
-            Others
+            Otros
         </button>
     </div>
     <div class="hidden-box show-others">
         <ul class="list-style-none dropdown-others dropdown-base" >
             
             <li class="dropdow-option px-3">
-                <a href="#">Configuracion</a>
+                <a href="#">Configuración</a>
             </li>
             <li class="dropdow-option px-3">
                 <a {% unless page.url == '/others/credits/' %} href="/others/credits" {% endunless %}  class="{% if page.url == '/others/credits/' %} text-decoration-underline color-black-important {% endif %}">Créditos</a>
