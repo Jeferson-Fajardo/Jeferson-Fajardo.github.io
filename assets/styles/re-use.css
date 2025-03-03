@@ -46,13 +46,13 @@
 }
 
 /* colors */
-.color-black{
+.black-color{
     color: black;
 }
-.color-white{
+.white-color{
     color: white;
 }
-.color-black-important{
+.black-color-important{
     color: black!important;
 }
 /* backgraound */
