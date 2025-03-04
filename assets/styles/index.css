@@ -299,7 +299,8 @@ body{
     width: 45%;
   }
 }
-@media screen and (max-width: 767px) { 
+
+@media screen and (max-width: 767px) {
 .ms-d-block, main{
   display: block!important;
 }
