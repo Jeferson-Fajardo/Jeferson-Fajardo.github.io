@@ -186,7 +186,3 @@ function copyText(box, i) {
         setTimeout(() => i.classList.replace("bi-check", "bi-copy"), 3000);
     }).catch(err => console.error("Error al copiar: ", err));
 }
-
-
-
-
