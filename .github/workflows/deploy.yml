@@ -7,7 +7,7 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Clonar repositorio
+      - name: clone the repository
         uses: actions/checkout@v3
       
       - name: create config.json
