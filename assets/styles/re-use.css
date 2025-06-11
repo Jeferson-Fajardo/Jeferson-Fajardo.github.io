@@ -17,6 +17,10 @@
 
 /* borders */
 
+.border-bottom-2px-black{
+    border-bottom: 2px solid black;
+}
+
 .borders-cero-l-r-b{
     border-left: 0;
     border-right: 0;
@@ -55,6 +59,10 @@
 .black-color-important{
     color: black!important;
 }
+.gray-color{
+    color: gray;
+}
+
 /* backgraound */
 .background-c-gray-102{
     background-color: rgb(102 102 102)!important;
@@ -68,6 +76,10 @@
 .py-5px{
     padding-top: 5px;
     padding-bottom: 5px;
+}
+.px-7px{
+    padding-left: 7px;
+    padding-right: 7px;
 }
 .px-10px{
     padding-left: 10px;
@@ -144,13 +156,24 @@
 .font-size-20px{
     font-size: 22px;
 }
+/* font-weight-bold */
+.font-weight-bold{
+    font-weight: bold;
+}
+
 /*gap*/
 .gap-10px{
     gap: 10px;
 }
 
 /* changes of bootstrapt */
+
 ol, ul {
     padding-left: 0rem;
 }
 
+/* Hover */
+
+.color-white-hover:hover{
+    color: white;
+}
