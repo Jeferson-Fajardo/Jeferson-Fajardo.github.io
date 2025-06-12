@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Jeferson Fajardo.">
+    <meta name="description" content="My Personal blog">
+    <link rel="shortcut icon" href="/assets/images/flower.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/styles/re-use.css">
+    <link rel="stylesheet" href="/assets/styles/main-header.css" > 
+    <link rel="stylesheet" href="/assets/styles/index.css" >
+    <title>Jeferson | software developer</title>
+</head>
+<body>
+    <!-- main header -->
+    <div class="container-fluid box-header position-fixed z-index-1000">
+    <div class=" sub-container d-flex justify-content-center" >
+        <div class="show-header d-flex justify-content-center align-items-center col-sm-8 col-xl-6 col-xxl-4" >
+            <div class="lines-header borders-cero-l-r-b switch"></div>
+            <div class="web-name-container d-flex justify-content-center align-items-center switch">
+                <div class="align-items-center h-35px">
+                    <img src="/assets/images/flower.png" class="logo-gray-filter logo" alt="logo" height="26px">
+                </div>
+                <h1 class="web-name">Murasaki</h1>
+            </div>
+            <div class="lines-header borders-cero-l-r-b switch"></div>
+        </div>
+    </div>
+    <nav class=" row justify-content-center menu-header invisible ">
+        <div class=" col-sm-10 col-xl-8 col-xxl-6 navegation-header d-flex justify-content-between">
+            <ul class=" main-list-header d-flex align-items-center gap-3 list-style-none pl-1rem"> 
+                <li class="line-underline">
+                    <a   class="d-flex justify-content-center text-decoration-none black-color  color-option ">
+                        Acerca de mí
+                    </a>
+                </li>
+                <li class="list-style-none btn-learn dropdown-parent" >
+    <div class="d-flex align-items-center content-to-learn  ">
+        <i class="material-icons i-to-learn-expand-more">expand_more</i>
+        <button class="box-transparent  ">
+             Aprender 
+        </button>
+    </div>
+    <div class="hidden-box show-to-learn ">
+        <div class="dropdown-to-learn dropdown-base">
+            <ul class="category-one list-style-none d-flex flex-column justify-content-center">
+                <li>
+                    <h5 class=""><b>Seguridad informática</b></h5>
+                </li>
+                <li class="d-flex align-items-center gap-3 ms-pl-10px">
+                    <img src="https://murasaki-dbd90.web.app/images/icons-articles/folder.webp" class="icon-article"  alt="Icono">
+                    <ul class="pl-0 list-style-none ">
+                        <li class="dropdow-option ">
+                            <a  href="/to-learn/cibersecurity"  
+                            class="">
+                                Ciberseguridad.
+                            </a>
+                        </li>
+                        <li class="dropdow-option ">
+                            <a  href="/to-learn/#"  
+                                class="">
+                                Tipos de ciberataques.
+                            </a>
+                        </li>
+                        <li class="dropdow-option ">
+                            <a  href="/to-learn/#"  
+                                class="">
+                                El poder de ingeniería social.
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="category-two list-style-none d-flex flex-column justify-content-center  ">
+                <li>
+                    <h5 class=""><b>Comida</b></h5>
+                </li>
+                <li class="d-flex align-items-center gap-3 ms-pl-10px">
+                    <img src="https://murasaki-dbd90.web.app/images/icons-articles/salad.webp" class="icon-article"  alt="Icono">
+                    <ul class=" list-style-none  pl-0">
+                        <li class="dropdow-option ">
+                            <a  href="/to-learn/#"  
+                            class="">
+                                El secreto de la abuela.
+                            </a>
+                        </li>
+                        <li class="dropdow-option ">
+                            <a href="#">Lorem ipsum dolor sit, amet.</a>
+                        </li>
+                        <li class="dropdow-option ">
+                            <a href="#">Lorem ipsum dolor sit, amet.</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="category-three list-style-none d-flex flex-column justify-content-center  ">
+                <li>
+                    <h5 class=""><b>Universo</b></h5>
+                </li>
+                <li class="d-flex align-items-center gap-3 ms-pl-10px">
+                    <img src="https://murasaki-dbd90.web.app/images/icons-articles/astronomy.webp" class="icon-article"  alt="Icono">
+                    <ul class=" list-style-none  pl-0">
+                        <li class="dropdow-option ">
+                            <a  href="/to-learn/#"  
+                                class="">
+                                ¿Estamos solos?
+                            </a>
+                        </li>
+                        <li class="dropdow-option ">
+                            <a  href="/to-learn/#"  
+                                class="">
+                                El planeta Rojo.
+                            </a>
+                        </li>
+                        <li class="dropdow-option ">
+                            <a  href="/to-learn/#"  
+                                class="">
+                                Lorem ipsum dolor sit, amet.
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="category-four list-style-none d-flex flex-column justify-content-center ">
+                <li>
+                    <h5 class=""><b>Herramientas</b></h5>
+                </li>
+                <li class="d-flex align-items-center gap-3">
+                    <img src="https://murasaki-dbd90.web.app/images/icons-articles/settings.webp" class="icon-article"  alt="Icono">
+                    <ul class=" list-style-none  pl-0">
+                        <li class="dropdow-option ">
+                            <a  href="/to-learn/#"  
+                                class="">
+                                Lorem ipsum dolor sit, amet.
+                            </a>
+                        </li>
+                        <li class="dropdow-option ">
+                            <a  href="/to-learn/#"  
+                                class="">
+                                Lorem ipsum dolor sit, amet.
+                            </a>
+                        </li>
+                        <li class="dropdow-option ">
+                            <a  href="/to-learn/#"  
+                                class="">
+                                Lorem ipsum dolor sit, amet.
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="category-five list-style-none d-flex flex-column justify-content-center ">
+                <li>
+                    <h5 class=""><b>Juegos</b></h5>
+                </li>
+                <li class="d-flex align-items-center gap-3">
+                    <img src="https://murasaki-dbd90.web.app/images/icons-articles/board-game.webp" class="icon-article"  alt="Icono">
+                    <ul class=" list-style-none pl-0">
+                        <li class="dropdow-option ">
+                            <a  href="/to-learn/#"  
+                                class="">
+                                Juegos offiline recomendados.
+                            </a>
+                        </li>
+                        <li class="dropdow-option ">
+                            <a  href="/to-learn/#"  
+                                class="">
+                                Lorem ipsum dolor sit, amet.
+                            </a>
+                        </li>
+                        <li class="dropdow-option ">
+                            <a  href="/to-learn/#"  
+                                class="">
+                                Lorem ipsum dolor sit, amet.
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="category-six list-style-none d-flex flex-column justify-content-center "> 
+                <li>
+                    <h5 class=""><b>Agricultura</b></h5>
+                </li>
+                <li class="d-flex align-items-center gap-3">
+                    <img src="https://murasaki-dbd90.web.app/images/icons-articles/sustainable-agriculture.webp" class="icon-article"  alt="Icono">
+                    <ul class=" list-style-none pl-0">
+                        <li class="dropdow-option ">
+                            <a  href="/to-learn/#"  
+                                class="">
+                                Saber el ph de la tierra.
+                            </a>
+                        </li>
+                        <li class="dropdow-option ">
+                            <a  href="/to-learn/#"  
+                                class="">
+                                Lorem ipsum dolor sit, amet.
+                            </a>
+                        </li>
+                        <li class="dropdow-option ">
+                            <a  href="/to-learn/#"  
+                                class="">
+                                Lorem ipsum dolor sit, amet.
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</li>
+<li class="list-style-none line-underline a-option" >
+    <a  href="/words"  class="text-decoration-none black-color ">Palabras</a>
+</li>
+<li class="list-style-none line-underline a-option">
+    <a  href="/phrases"   class="text-decoration-none black-color " >Frases</a>
+</li>
+<li class="list-style-none dropdown-parent" >
+    <div class="d-flex align-items-center content-others ">
+        <i class="material-icons i-others-expand-more  ">expand_more</i>
+        <button class="box-transparent  ">
+            Otros
+        </button>
+    </div>
+    <div class="hidden-box show-others">
+        <ul class="list-style-none dropdown-others dropdown-base" >
+            
+            <li class="dropdow-option px-3">
+                <a href="#">Configuración</a>
+            </li>
+            <li class="dropdow-option px-3">
+                <a  href="/others/credits"   class="">Créditos</a>
+            </li>
+            <li class="dropdow-option px-3">
+                <a href="#">lorem lorem lorem</a>
+            </li>
+            <li class="dropdow-option px-3">
+                <a href="#">lorem lorem lorem</a>
+            </li>
+            <li class="dropdow-option px-3">
+                <a href="#">lorem lorem lorem</a>
+            </li>
+            <li class="dropdow-option px-3">
+                <a href="#">lorem lorem lorem</a>
+            </li>
+
+        </ul>
+    </div>
+</li>
+
+            </ul>
+            <ul class="secondary-list-header gap-4 list-style-none">
+    <li class="line-underline a-option">
+        <a  href="/About/" class="text-decoration-none black-color ">Acerca de</a>
+    </li>
+</ul>
+        </div>
+    </nav>
+</div>
+<nav class="header-cell-phone d-flex justify-content-between align-items-center w-full ">
+    <ul class="list-style-none d-flex gap-3">
+        <li class="d-flex web-name-container">
+            <div class="align-items-center h-35px logo">
+                <img src="/assets/images/flower.png" alt="logo"  height="26px">
+            </div>
+            <h1 class="web-name web-name-shadow">Murasaki</h1>
+        </li>
+        <li class="d-flex align-items-center">
+            <a  class="black-color  line-underline ">About me</a>        
+        </li>
+    </ul>
+    <i class="bi bi-list menu-navegation"></i>
+</nav>
+<div class="w-full d-flex justify-content-end">
+    <div class="accordion-base " >      
+        <li class="list-style-none btn-learn dropdown-parent" >
+    <div class="d-flex align-items-center content-to-learn  ">
+        <i class="material-icons i-to-learn-expand-more">expand_more</i>
+        <button class="box-transparent  ">
+             Aprender 
+        </button>
+    </div>
+    <div class="hidden-box show-to-learn ">
+        <div class="dropdown-to-learn dropdown-base">
+            <ul class="category-one list-style-none d-flex flex-column justify-content-center">
+                <li>
+                    <h5 class=""><b>Seguridad informática</b></h5>
+                </li>
+                <li class="d-flex align-items-center gap-3 ms-pl-10px">
+                    <img src="https://murasaki-dbd90.web.app/images/icons-articles/folder.webp" class="icon-article"  alt="Icono">
+                    <ul class="pl-0 list-style-none ">
+                        <li class="dropdow-option ">
+                            <a  href="/to-learn/cibersecurity"  
+                            class="">
+                                Ciberseguridad.
+                            </a>
+                        </li>
+                        <li class="dropdow-option ">
+                            <a  href="/to-learn/#"  
+                                class="">
+                                Tipos de ciberataques.
+                            </a>
+                        </li>
+                        <li class="dropdow-option ">
+                            <a  href="/to-learn/#"  
+                                class="">
+                                El poder de ingeniería social.
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="category-two list-style-none d-flex flex-column justify-content-center  ">
+                <li>
+                    <h5 class=""><b>Comida</b></h5>
+                </li>
+                <li class="d-flex align-items-center gap-3 ms-pl-10px">
+                    <img src="https://murasaki-dbd90.web.app/images/icons-articles/salad.webp" class="icon-article"  alt="Icono">
+                    <ul class=" list-style-none  pl-0">
+                        <li class="dropdow-option ">
+                            <a  href="/to-learn/#"  
+                            class="">
+                                El secreto de la abuela.
+                            </a>
+                        </li>
+                        <li class="dropdow-option ">
+                            <a href="#">Lorem ipsum dolor sit, amet.</a>
+                        </li>
+                        <li class="dropdow-option ">
+                            <a href="#">Lorem ipsum dolor sit, amet.</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="category-three list-style-none d-flex flex-column justify-content-center  ">
+                <li>
+                    <h5 class=""><b>Universo</b></h5>
+                </li>
+                <li class="d-flex align-items-center gap-3 ms-pl-10px">
+                    <img src="https://murasaki-dbd90.web.app/images/icons-articles/astronomy.webp" class="icon-article"  alt="Icono">
+                    <ul class=" list-style-none  pl-0">
+                        <li class="dropdow-option ">
+                            <a  href="/to-learn/#"  
+                                class="">
+                                ¿Estamos solos?
+                            </a>
+                        </li>
+                        <li class="dropdow-option ">
+                            <a  href="/to-learn/#"  
+                                class="">
+                                El planeta Rojo.
+                            </a>
+                        </li>
+                        <li class="dropdow-option ">
+                            <a  href="/to-learn/#"  
+                                class="">
+                                Lorem ipsum dolor sit, amet.
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="category-four list-style-none d-flex flex-column justify-content-center ">
+                <li>
+                    <h5 class=""><b>Herramientas</b></h5>
+                </li>
+                <li class="d-flex align-items-center gap-3">
+                    <img src="https://murasaki-dbd90.web.app/images/icons-articles/settings.webp" class="icon-article"  alt="Icono">
+                    <ul class=" list-style-none  pl-0">
+                        <li class="dropdow-option ">
+                            <a  href="/to-learn/#"  
+                                class="">
+                                Lorem ipsum dolor sit, amet.
+                            </a>
+                        </li>
+                        <li class="dropdow-option ">
+                            <a  href="/to-learn/#"  
+                                class="">
+                                Lorem ipsum dolor sit, amet.
+                            </a>
+                        </li>
+                        <li class="dropdow-option ">
+                            <a  href="/to-learn/#"  
+                                class="">
+                                Lorem ipsum dolor sit, amet.
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="category-five list-style-none d-flex flex-column justify-content-center ">
+                <li>
+                    <h5 class=""><b>Juegos</b></h5>
+                </li>
+                <li class="d-flex align-items-center gap-3">
+                    <img src="https://murasaki-dbd90.web.app/images/icons-articles/board-game.webp" class="icon-article"  alt="Icono">
+                    <ul class=" list-style-none pl-0">
+                        <li class="dropdow-option ">
+                            <a  href="/to-learn/#"  
+                                class="">
+                                Juegos offiline recomendados.
+                            </a>
+                        </li>
+                        <li class="dropdow-option ">
+                            <a  href="/to-learn/#"  
+                                class="">
+                                Lorem ipsum dolor sit, amet.
+                            </a>
+                        </li>
+                        <li class="dropdow-option ">
+                            <a  href="/to-learn/#"  
+                                class="">
+                                Lorem ipsum dolor sit, amet.
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="category-six list-style-none d-flex flex-column justify-content-center "> 
+                <li>
+                    <h5 class=""><b>Agricultura</b></h5>
+                </li>
+                <li class="d-flex align-items-center gap-3">
+                    <img src="https://murasaki-dbd90.web.app/images/icons-articles/sustainable-agriculture.webp" class="icon-article"  alt="Icono">
+                    <ul class=" list-style-none pl-0">
+                        <li class="dropdow-option ">
+                            <a  href="/to-learn/#"  
+                                class="">
+                                Saber el ph de la tierra.
+                            </a>
+                        </li>
+                        <li class="dropdow-option ">
+                            <a  href="/to-learn/#"  
+                                class="">
+                                Lorem ipsum dolor sit, amet.
+                            </a>
+                        </li>
+                        <li class="dropdow-option ">
+                            <a  href="/to-learn/#"  
+                                class="">
+                                Lorem ipsum dolor sit, amet.
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</li>
+<li class="list-style-none line-underline a-option" >
+    <a  href="/words"  class="text-decoration-none black-color ">Palabras</a>
+</li>
+<li class="list-style-none line-underline a-option">
+    <a  href="/phrases"   class="text-decoration-none black-color " >Frases</a>
+</li>
+<li class="list-style-none dropdown-parent" >
+    <div class="d-flex align-items-center content-others ">
+        <i class="material-icons i-others-expand-more  ">expand_more</i>
+        <button class="box-transparent  ">
+            Otros
+        </button>
+    </div>
+    <div class="hidden-box show-others">
+        <ul class="list-style-none dropdown-others dropdown-base" >
+            
+            <li class="dropdow-option px-3">
+                <a href="#">Configuración</a>
+            </li>
+            <li class="dropdow-option px-3">
+                <a  href="/others/credits"   class="">Créditos</a>
+            </li>
+            <li class="dropdow-option px-3">
+                <a href="#">lorem lorem lorem</a>
+            </li>
+            <li class="dropdow-option px-3">
+                <a href="#">lorem lorem lorem</a>
+            </li>
+            <li class="dropdow-option px-3">
+                <a href="#">lorem lorem lorem</a>
+            </li>
+            <li class="dropdow-option px-3">
+                <a href="#">lorem lorem lorem</a>
+            </li>
+
+        </ul>
+    </div>
+</li>
+
+        <ul class="secondary-list-header gap-4 list-style-none">
+    <li class="line-underline a-option">
+        <a  href="/About/" class="text-decoration-none black-color ">Acerca de</a>
+    </li>
+</ul>
+    </div>
+</div>
+    <main>     
+   <div class="add-space mt-60px row d-flex justify-content-center">
+      <div class="col-sm-12 col-lg-11 col-xl-9 col-xxl-8">
+         <div class="w-full info-about-me gap-6">
+            <div class="d-flex justify-content-center align-items-center align-content-center ms-d-block">
+               <picture class="picture-circle align-content-center">
+                  <source srcset="https://murasaki-dbd90.web.app/images/profile/profile-image.webp" type="image/webp">
+                  <img src="https://murasaki-dbd90.web.app/images/profile/profile-image.jpg" alt="Perfil">
+               </picture>
+               <div class="info-circle">
+                  <h1 class="profile-name align-content-center"><b>Jeferson Fajardo</b></h1>
+                  <p class="profile-info">
+                     Soy un desarrollador de software apasionado, me desempeño por crear sitios webs dinámicos y funcionales enfocados en la usabilidad del usuario. He creado este blog para compartir mis pensamientos y mi aprendizaje sobre un mundo morado.
+                  </p>
+               </div>
+            </div>
+            <div class="d-flex justify-content-center gap-4">
+               <div class="d-flex align-items-center">
+                  <h3 class="know-about-me cursor-pointer"><b>! Conoce más sobre mí!</b></h3>
+               </div>
+               <img class="img-dark-arrow" src="https://murasaki-dbd90.web.app/images/arrows/Dark-arrow.webp" alt="flecha oscura"> 
+            </div>
+            <div class="d-flex justify-content-center">
+               <div class="more-about-me d-flex flex-column font-size-20px">
+                  <div class="d-flex justify-content-center flex-column experience-container px-10px">
+                     <h3 class="experience-title"><b>Experiencia</b></h3>
+                     <div class="content-experience">
+                        <div>
+                           <span>TRILLIANT NETWORKS S.A.S</span>
+                           <p>Probador de software - Aprendiz.  Abril 2024 a octubre 2024</p>
+                        </div>
+                        <span>Logros alcazados.</span>
+                        <ul class="list-style-none">
+                           <li>-Automatización exitosa de un ‘endpoint’ de una API en Postman.</li>
+                           <li>-Ejecución de pruebas de software.</li>
+                           <li>-Reporte de casos de prueba en el software ‘Team Foundation Server’.</li>
+                        </ul>
+                     </div>
+                  </div>
+                  <div class="px-10px projects-container">
+                     <div class="w-full">
+                        <h3><b>Proyectos</b></h3>
+                     </div>
+                     <div class="w-full d-flex justify-content-center align-items-center">
+                        <div class="glide__arrows w-auto" data-glide-el="controls">
+                           <i class="bi bi-arrow-left-circle-fill glide__arrow glide__arrow--left d-flex justify-content-end" data-glide-dir="<"></i>
+                        </div>
+                        <div class="glide carousel-container">
+                           <div class="glide__track" data-glide-el="track">
+                              <ul class="glide__slides d-flex align-items-center carousel-slides">
+                                 <li class="glide__slide carousel-card">
+                                    <div  class="project-image" data-img1="farmacit/home.webp" data-img2="farmacit/login.webp" data-img3="farmacit/dashboard.webp">
+                                       <div class="project-title">
+                                          <span><b><a class="black-color text-decoration-none" href="#">Farmacit</a></b></span>
+                                       </div>
+                                    </div>
+                                    <div>
+                                       <div class="card-description d-flex align-items-center" >
+                                          <p class="text-align-center">Tienda en linea de productos farmaceuticos.</p>
+                                       </div>
+                                       <div class="card-technologies d-flex justify-content-center align-items-center flex-wrap gap-2">
+                                          <i class="bi bi-bootstrap-fill"></i>
+                                          <img class="technology-icon" src="https://murasaki-dbd90.web.app/images/technology-icons/js.webp"  alt="Icono JavaScript">
+                                          <img class="technology-icon" src="https://murasaki-dbd90.web.app/images/technology-icons/python.webp"  alt="Icono Python">
+                                          <img class="technology-icon" src="https://murasaki-dbd90.web.app/images/technology-icons/flask.webp"  alt="Icono Flask">
+                                       </div>
+                                    </div>
+                                 </li>
+                                 <li class="glide__slide carousel-card">
+                                    <div  class="project-image" data-img1="question.webp" data-img2="" data-img3="">
+                                       <div class="project-title">
+                                          <span><b><a class="black-color text-decoration-none" href="#">Calculator</a></b></span>
+                                       </div>
+                                    </div>
+                                    <div>
+                                       <div class="card-description d-flex align-items-center">
+                                          <p class="text-align-center">Calculadora con super poderes. </p>
+                                       </div>
+                                       <div class="card-technologies d-flex justify-content-center align-items-center flex-wrap gap-2">
+                                          <i class="bi bi-bootstrap-fill"></i>
+                                          <img class="technology-icon" src="https://murasaki-dbd90.web.app/images/technology-icons/js.webp"  alt="Icono JavaScript">
+                                          <img class="technology-icon" src="https://murasaki-dbd90.web.app/images/technology-icons/python.webp"  alt="Icono Python">
+                                       </div>
+                                    </div>
+                                 </li>
+                                 <li class="glide__slide carousel-card">
+                                    <div  class="project-image" data-img1="question.webp" data-img2="" data-img3="">
+                                       <div class="project-title">
+                                          <span><b><a class="black-color text-decoration-none" href="#">Snake</a></b></span>
+                                       </div>
+                                    </div>
+                                    <div>
+                                       <div class="card-description d-flex align-items-center">
+                                          <p class="text-align-center">Juego de la culebrita.</p>
+                                       </div>
+                                       <div class="card-technologies d-flex justify-content-center align-items-center flex-wrap gap-2">
+                                          <img class="technology-icon" src="https://murasaki-dbd90.web.app/images/technology-icons/js.webp"  alt="Icono JavaScript">           
+                                       </div>
+                                    </div>
+                                 </li> 
+                              </ul>
+                           </div>
+                        </div>
+                        <div class="glide__arrows w-auto" data-glide-el="controls">
+                           <i class="bi bi-arrow-right-circle-fill glide__arrow glide__arrow--right" data-glide-dir=">"></i>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="skills-container d-flex w-full px-10px">
+                     <div class="container-technical-skills">
+                        <div>
+                           <h3><b>Habilidades Tenicas</b></h3>
+                        </div>
+                        <ul class="p-10px list-style-none">
+                           <li>
+                              <h4>Frontend</h4>
+                              <p class="px-10px">HTML, CSS, JavaScript, Vite.</p>
+                           </li>
+                           <li>
+                              <h4> Backend</h4>
+                              <p class="px-10px" >Java, JSP, PHP, Laravel, Python, Flask,  Django, SQL, Mysql.</p>
+                           </li>
+                           <li>
+                              <h4>Herramientas de colaboración</h4>
+                              <p class="px-10px" >Excel, Git, Postman, TFS.</p>
+                           </li>
+                           <li>
+                              <h4>Metodologías de trabajo</h4>
+                              <p class="px-10px">Scrum.</p>
+                           </li>
+                        </ul>
+                     </div>                     
+                     <div class="container-soft-skills">
+                        <div>
+                           <h3><b>Habilidades blandas</b></h3>
+                        </div>
+                        <div class="d-flex flex-column text-center justify-content-center content-soft-skills ">
+                           <div class="group-words">
+                              <span class="black-option-skill white-color border-transparent-1px">Adaptabilidad</span>
+                              <span class="white-option-skill">Inteligencia emocional</span>
+                           </div>
+                           <div class="group-words">
+                              <span class="white-option-skill ">Responsabilidad</span>
+                              <span class="black-option-skill white-color border-transparent-1px">Solución de problemas</span>
+                           </div>
+                           <div class="group-words">
+                              <span class="white-option-skill ">Retropectivo</span>
+                              <span class="black-option-skill white-color border-transparent-1px">Creatividad</span>
+                              <span class="white-option-skill ">Empatía</span>
+                           </div>
+                           <div class="group-words">
+                              <span class="black-option-skill white-color border-transparent-1px">Pensamiento critico</span>
+                              <span class="white-option-skill ">Sinceridad</span>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="d-flex flex-column justify-content-center p-10px">
+                     <div>
+                        <h3><b>Educación</b></h3>
+                     </div>
+                     <div class="p-10px">
+                        <h4> <b>Centro De Gestión Agroempresarial Del Oriente</b></h4>
+                        <div class="px-10px">
+                           <p class="mb-0px">Tecnología <br>
+                              Análisis y Desarrollo de Software.</p>
+                              <span>Julio  2022 a abril 2024.</span>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="p-10px">
+                     <div>
+                        <h3><b>Certificaciones</b></h3>
+                     </div>
+                     <div class="d-grid certification-content p-10px " >
+                        <a href="https://1drv.ms/b/c/e155f91544c06864/ESs4zHaQXThGnIyfPLCPYegBaIw9n_21zE-Lmtk5Zxbyng?e=6Zzh4p" target="_blank" class="text-decoration-none black-color " >
+                           <div class="certificate p-10px h-full">
+                              <p>Tecnólogo en Análisis y Desarrollo de Software</p>
+                              <span>SENA - Diciembre 2024.</span>
+                           </div>
+                        </a>
+                        <a href="https://platzi.com/p/Jeferson-Fajardo/curso/1557-git-github/diploma/detalle/" target="_blank" class="text-decoration-none black-color " >
+                           <div class="certificate p-10px h-full">
+                              <p>Curso Profesional de Git y Github</p>
+                              <span>Platzi - Diciembre 2024.</span>
+                           </div>
+                        </a>
+                        <a href="https://www.coursera.org/account/accomplishments/verify/HCLXTCCDR9WO?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta&utm_product=course" target="_blank" class="text-decoration-none black-color " >
+                           <div class="certificate p-10px h-full">
+                              <p>Fundamentos de la Ciberseguridad</p>
+                              <span>Coursera - Diciembre 2024.</span>
+                           </div>
+                        </a>
+                        <a href="https://1drv.ms/b/c/e155f91544c06864/EZyPCdyLKU9EgGI0rUfqQWMBpUKAoyWolgFqG2BBdFCBpA?e=NocqW4" target="_blank" class="text-decoration-none black-color " >
+                           <div class="certificate p-10px h-full">
+                              <p>Fundamentos Básicos de Programación en Java</p>
+                              <span>SENA - Noviembre 2022.</span>
+                           </div>
+                        </a>
+                     </div>
+                     <a href="https://1drv.ms/f/c/e155f91544c06864/EmYhK2-xrjhIjtWVqcbRGzoBW2O5F9F6MSe1bTE3VSllUg?e=gq3HSd" target="_blank" style="color: gray;" >
+                        <p class="text-end p-10px more-certitications " >Más certificaciones aqui..</p>
+                     </a>
+                  </div>
+                  <div class="px-10px">
+                     <div>
+                        <h3><b>Pasiones e Intereses Personales</b></h3>
+                     </div>
+                     <div class="p-10px ">
+                        <p>Fuera del ámbito profesional, me gusta mantenerme activo con varias actividades como:</p>
+                        <ul class="px-10px list-style-none d-flex flex-column gap-2">
+                           <li>- <b>Jugar ajedrez</b>, especialmente cuando veo cada una de las posiblidades que se pueden  hacer en el tablero me entusiasma mucho.</li>
+                           <li>- Me apasiona <b>ver anime</b>, lo que me permite explorar diversas narrativas y estilos artísticos que enriquecen mi creatividad.</li>
+                           <li>- Disfruto jugando <b>juegos como Clash Royale y ARK: Survival Evolved</b>, donde el pensamiento rápido, la adaptación a nuevas estrategias y la toma de decisiones en tiempo real son cruciales.</li>
+                        </ul>
+                     </div>
+                  </div>
+                  <div class="p-10px">
+                     <div>
+                        <h3><b>Contáctame</b></h3>
+                     </div>
+                     <div class="d-grid contact-me-content p-10px">
+                        <div>
+                           <h5><b>CORREO</b></h5>
+                           <div class="d-flex justify-content-between contact-me-box border-transparent-1px">
+                              <span class=" p-10px">Jeferson.Fajard@gmail.com</span>
+                              <i class="bi bi-copy p-10px cursor-pointer "></i>
+                           </div>
+                        </div>
+                        <div>
+                           <h5><b>LINKEDIN</b></h5>
+                           <div class="d-flex justify-content-between  gap-10px contact-me-box border-transparent-1px">
+                              <a href="https://linkedin.com/in/jeferson-fajardo" class="text-decoration-none black-color p-10px" target="_blank"><span class=" ">linkedin.com/in/jeferson-fajardo</span></a>
+                              <i class="bi bi-copy p-10px d-flex align-items-center cursor-pointer "></i>
+                           </div>
+                        </div>
+                        <div>
+                           <h5><b>GITHUB</b></h5>
+                           <div class="d-flex justify-content-between gap-10px contact-me-box border-transparent-1px">
+                              <a href="https://github.com/Jeferson-Fajardo" class="text-decoration-none black-color p-10px " target="_blank"><span class="">github.com/Jeferson-Fajardo</span></a>
+                              <i class="bi bi-copy p-10px d-flex align-items-center cursor-pointer " ></i>
+                           </div>
+                        </div>
+                        <div>
+                           <h5><b>X</b></h5>
+                           <div class="d-flex justify-content-between gap-10px contact-me-box border-transparent-1px">
+                              <a href="https://x.com/Jeferson_Fajard" class="text-decoration-none black-color p-10px" target="_blank"><span class="">x.com/Jeferson_Fajard</span></a>
+                              <i class="bi bi-copy p-10px d-flex align-items-center cursor-pointer "></i> 
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      <div class="d-flex align-items-center container-hr-am">
+         <div class="hr-about-me"> </div>
+      </div>
+      <div class="d-flex justify-content-center">
+         <div class="col-11 col-sm-11 col-md-11 carousel d-flex flex-column gap-3 justify-content-center">
+            <div class="carousel-content-one">
+               <span class="text">La comida une culturas, brinda energía y despierta emociones inolvidables.</span>
+               <span class="text">Discernir.</span>
+               <span class="text">Haz que lo imposible sea posible.</span>
+               <span class="text">El anime te muestra un universo lleno de colores donde puedes explorarlos a tu gusto.</span>
+               <span class="text">¡ OMG !</span>
+               <!-- duplicated -->
+               <span class="text">La comida une culturas, brinda energía y despierta emociones inolvidables.</span>
+               <span class="text">Discernir.</span>
+               <span class="text">Haz que lo imposible sea posible.</span>
+               <span class="text">El anime te muestra un universo lleno de colores donde puedes explorarlos a tu gusto.</span>
+               <span class="text">Omg!</span>
+            </div>
+            <div class="carousel-content-two">
+               <span class="text">La seguridad es el campo que todo humano debería saber, ¿ aprenderías sobre ello ?.</span>
+               <span class="text">Priorizar.</span>
+               <span class="text">No es cantidad, es calidad.</span>
+               <span class="text">Sabias que si agregar un punto al principio de una carpeta esta se oculta?.</span>
+               <span class="text">Serendipia</span>
+               <!-- duplicated -->
+               <span class="text">La seguridad es el campo que todo humano debería saber, ¿ aprenderías sobre ello ?.</span>
+               <span class="text">Priorizar.</span>
+               <span class="text">No es cantidad, es calidad.</span>
+               <span class="text">Sabias que si agregas un punto al principio de una carpeta esta se oculta?.</span>
+               <span class="text">Serendipia</span>
+            </div>
+         </div>  
+      </div>
+      <div class="search-box d-flex align-items-end justify-content-center gap-3">
+         <div class="search d-flex align-items-center justify-content-between">
+            <textarea type="text" class="textarea-search" placeholder="Buscar articulos."></textarea>
+            <i class="bi bi-x clear-icon d-none"></i>
+         </div>
+         <i class="bi bi-search search-icon"></i>
+      </div>
+      <div class="d-none align-items-center articles-container w-auto flex-column">
+         <ul class="list-articles list-style-none ">
+            <li class="li-pagination d-flex justify-content-center align-items-center">
+               <div>
+                  <ul class="d-flex justify-content-center align-items-center gap-3 list-style-none pagination flex-wrap"></ul>
+               </div>
+            </li>
+         </ul>
+      </div>
+   </div>
+</div>
+
+   <!-- scripts -->
+   <script src="assets/libs/glide/js/glide.min.js"></script>
+   <script type="module" src="assets/js/index/glide.js"></script>
+   <script type="module" src="assets/js/index.js"></script>
+   <link rel="stylesheet" href="assets/libs/glide/styles/glide.core.min.css">
+</main>
+    <script  src="/assets/js/home-header.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

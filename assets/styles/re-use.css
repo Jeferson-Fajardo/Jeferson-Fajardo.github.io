@@ -1,0 +1,179 @@
+*{
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+/* widths */
+
+.w-full{
+    width: 100%;
+}
+.w-middle{
+    width: 50%;
+}
+
+
+/* borders */
+
+.border-bottom-2px-black{
+    border-bottom: 2px solid black;
+}
+
+.borders-cero-l-r-b{
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 0;
+}
+.border-transparent-1px{
+    border: 1px solid transparent;
+}
+
+/* border-color */
+
+.border-color-transparent{
+    border-color:transparent!important;
+}
+
+/* list */
+
+.list-style-none{
+    list-style: none;
+}
+
+/* select */
+
+.box-transparent{
+    background-color: transparent;
+    border: transparent;
+}
+
+/* colors */
+.black-color{
+    color: black;
+}
+.white-color{
+    color: white;
+}
+.black-color-important{
+    color: black!important;
+}
+.gray-color{
+    color: gray;
+}
+
+/* backgraound */
+.background-c-gray-102{
+    background-color: rgb(102 102 102)!important;
+}
+
+/* padding */
+
+.p-10px{
+    padding: 10px;
+}
+.py-5px{
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.px-7px{
+    padding-left: 7px;
+    padding-right: 7px;
+}
+.px-10px{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.pl-0{
+    padding-left: 0;
+}
+
+.pl-0_75rem{
+    padding-left: 0.75rem;
+}
+.pl-6px{
+    padding-left: 6px;
+}
+
+.pt-100px{
+    padding-top: 100px!important;
+}
+.pl-15px{
+    padding-left: 15px;
+}
+.pl-1rem{
+    padding-left: 1rem;
+}
+
+/* margin */
+
+.m-10px{
+    margin: 10px;
+}
+
+.mt-60px{
+    margin-top: 60px;
+}
+
+.mb-0px{
+    margin-bottom: 0px;
+}
+/* z-index */
+
+.z-index-1000{
+    z-index: 1000;
+}
+
+/* text-decoration */
+
+.text-decoration-underline{
+    text-decoration: underline;
+}
+.text-decoration-none{
+    text-decoration: none;
+}
+
+/* height */
+
+.h-0{
+    height: 0;
+}
+.h-35px{
+    height: 35px;
+}
+.h-full{
+    height: 100%;
+}
+
+
+/* cursor  */
+.cursor-pointer{
+    cursor: pointer;
+}
+/* font size */
+.font-size-20px{
+    font-size: 22px;
+}
+/* font-weight-bold */
+.font-weight-bold{
+    font-weight: bold;
+}
+
+/*gap*/
+.gap-10px{
+    gap: 10px;
+}
+
+/* changes of bootstrapt */
+
+ol, ul {
+    padding-left: 0rem;
+}
+
+/* Hover */
+
+.color-white-hover:hover{
+    color: white;
+}

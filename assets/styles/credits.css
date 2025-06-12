@@ -1,0 +1,18 @@
+.main-container{
+    padding-right: 15px;
+    padding-bottom: 15px;
+}
+.title-container{
+    height: 118px;
+}
+.title{
+    font-size: 2.7rem;
+    text-underline-offset: 5px;
+}
+.images-subtitle{
+    padding-top: 10px;
+}
+.container-content{
+    font-size: 1.2rem;
+}
+
