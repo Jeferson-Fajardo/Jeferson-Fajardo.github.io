@@ -26,4 +26,4 @@ async function loadFirebaseConfig() {
   return { app, db };
 }
 // Export the function to other files
-export { loadFirebaseConfig };
+export { loadFirebaseConfig };  

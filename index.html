@@ -135,14 +135,14 @@ style: index
                            </li>
                         </ul>
                      </div>                     
-                     <div class="container-soft-skills" >
+                     <div class="container-soft-skills">
                         <div>
                            <h3><b>Habilidades blandas</b></h3>
                         </div>
                         <div class="d-flex flex-column text-center justify-content-center content-soft-skills ">
                            <div class="group-words">
                               <span class="black-option-skill white-color border-transparent-1px">Adaptabilidad</span>
-                              <span class="white-option-skill">Inteligenciaemocional</span>
+                              <span class="white-option-skill">Inteligencia emocional</span>
                            </div>
                            <div class="group-words">
                               <span class="white-option-skill ">Responsabilidad</span>
@@ -293,16 +293,26 @@ style: index
       </div>
       <div class="search-box d-flex align-items-end justify-content-center gap-3">
          <div class="search d-flex align-items-center justify-content-between">
-            <textarea type="text" class="textarea-search"></textarea>
+            <textarea type="text" class="textarea-search" placeholder="Buscar articulos."></textarea>
             <i class="bi bi-x clear-icon d-none"></i>
          </div>
          <i class="bi bi-search search-icon"></i>
+      </div>
+      <div class="d-none align-items-center articles-container w-auto flex-column">
+         <ul class="list-articles list-style-none ">
+            <li class="li-pagination d-flex justify-content-center align-items-center">
+               <div>
+                  <ul class="d-flex justify-content-center align-items-center gap-3 list-style-none pagination flex-wrap"></ul>
+               </div>
+            </li>
+         </ul>
       </div>
    </div>
 </div>
 
    <!-- scripts -->
    <script src="assets/libs/glide/js/glide.min.js"></script>
+   <script type="module" src="assets/js/index/glide.js"></script>
    <script type="module" src="assets/js/index.js"></script>
    <link rel="stylesheet" href="assets/libs/glide/styles/glide.core.min.css">
 </main>
