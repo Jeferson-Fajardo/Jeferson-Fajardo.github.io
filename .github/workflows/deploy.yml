@@ -1,16 +1,31 @@
 name: Deploy a GitHub Pages
+
 on:
   push:
     branches:
       - main
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: clone the repository
+      - name: Clone the repository
         uses: actions/checkout@v3
-      
-      - name: create config.json
+
+      - name: Setup Ruby for Jekyll
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.1'
+
+      - name: Install dependencies
+        run: |
+          gem install bundler
+          bundle install
+
+      - name: Build Jekyll site
+        run: bundle exec jekyll build
+
+      - name: Create config.json inside _site/assets
         run: |
           mkdir -p ./_site/assets
           echo '{
@@ -23,7 +38,7 @@ jobs:
             "measurementId": "${{ secrets.FIREBASE_MEASUREMENT_ID }}"
           }' > ./_site/assets/config.json
 
-      - name: Deploy a GitHub Pages
+      - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
