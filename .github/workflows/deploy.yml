@@ -1,4 +1,4 @@
-name: Deploy a GitHub Pages
+name: Deploy to GitHub Pages
 
 on:
   push:
@@ -8,6 +8,7 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+
     steps:
       - name: Clone the repository
         uses: actions/checkout@v3
@@ -38,8 +39,12 @@ jobs:
             "measurementId": "${{ secrets.FIREBASE_MEASUREMENT_ID }}"
           }' > ./_site/assets/config.json
 
+      - name: Inspect config.json
+        run: cat ./_site/assets/config.json
+
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./_site
+          enable_jekyll: false
