@@ -20,7 +20,7 @@ jobs:
             "messagingSenderId": "${{ secrets.FIREBASE_MESSAGING_SENDER_ID }}",
             "appId": "${{ secrets.FIREBASE_APP_ID }}",
             "measurementId": "${{ secrets.FIREBASE_MEASUREMENT_ID }}"
-          }' > assets/config.json
+          }' > ./_site/assets/config.json
 
       - name: Deploy a GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
