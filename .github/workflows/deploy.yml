@@ -12,6 +12,7 @@ jobs:
       
       - name: create config.json
         run: |
+          mkdir -p ./_site/assets
           echo '{
             "apiKey": "${{ secrets.FIREBASE_API_KEY }}",
             "authDomain": "${{ secrets.FIREBASE_AUTH_DOMAIN }}",
