@@ -2,4 +2,3 @@ venv_blog
 _site/
 .env
 node_modules/
-assets/config.json
