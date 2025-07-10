@@ -255,6 +255,15 @@ body{
 .certificate:hover{
   background-color: rgba(199, 199, 199, 0.49);
 }
+.more-certifications-container{
+  display: flex;
+  justify-content: end;
+}
+.more-certitications{
+  color: gray;
+  display: inline-block; 
+  width: fit-content;
+}
 .more-certitications:hover{
   color: black;
 }
