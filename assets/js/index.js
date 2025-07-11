@@ -68,15 +68,19 @@ contactMeBoxes.forEach(box => {
     let i = box.querySelector("i");
     let a = box.querySelector("a");
 
-    const toggleHoverState = () => {
-        if(i && box && a){   
-            i.classList.toggle("bi-copy-hover");
-            box.classList.toggle("contact-me-box-hover");
-            a.classList.toggle("text-decoration-none");
+    const toggleHoverState = (isHovering) => {
+        if (isHovering) {
+            i.classList.add("bi-copy-hover");
+            box.classList.add("contact-me-box-hover");
+            a.classList.remove("text-decoration-none");
+        } else {
+            i.classList.remove("bi-copy-hover");
+            box.classList.remove("contact-me-box-hover");
+            a.classList.add("text-decoration-none");
         }
     };
-    box.addEventListener("mouseenter", () => toggleHoverState());
-    box.addEventListener("mouseleave", () => toggleHoverState());
+    box.addEventListener("mouseenter", () => toggleHoverState(true));
+    box.addEventListener("mouseleave", () => toggleHoverState(false));
     i.addEventListener("click", () => copyText(box, i));
 });
 
