@@ -69,9 +69,10 @@ contactMeBoxes.forEach(box => {
     let a = box.querySelector("a");
 
     const toggleHoverState = () => {
-        if(i && box && a){   
-            i.classList.toggle("bi-copy-hover");
-            box.classList.toggle("contact-me-box-hover");
+        i.classList.toggle("bi-copy-hover");
+        box.classList.toggle("contact-me-box-hover");
+
+        if(a){
             a.classList.toggle("text-decoration-none");
         }
     };
