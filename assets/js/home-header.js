@@ -238,7 +238,6 @@ const showHeader = document.querySelector(".show-header"),
 
             document.addEventListener("pointerdown", function(event) {
                 event.preventDefault();
-                console.log(event.pointerType);
                 if (! headerCellPhone.contains(event.target) && !accordion.contains(event.target) && !iconList.contains(event.target) && accordion.classList.contains("accordion-active")) {
                     toggleAccordion();
                     changeIconSidebar();
