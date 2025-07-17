@@ -20,14 +20,12 @@ const showHeader = document.querySelector(".show-header"),
     showOthers = document.querySelector(".show-others"),
     contentOthers = document.querySelector(".content-others"),
     _switch = document.querySelectorAll(".switch"),
-    isTouch = 'ontouchstart' in window || navigator.maxTouchPoints > 0,
     hiddenBox = document.querySelector(".hidden-box"),
     parentDropdownLargeDevices = document.querySelectorAll(".dropdown-parent");
     
-let flagMainMenu = false,
+    let flagMainMenu = false,
     lastScrollY = window.scrollY,
-    isSmallDevice = false,
-    eventType = isTouch ? 'touchstart' : 'click';
+    isSmallDevice = false;
 
     // Know if the screen is small.
     function isSmallScreen() {
@@ -76,9 +74,9 @@ let flagMainMenu = false,
         lastScrollY = currentScrollY;    
     }
 
-     // Show or hidden the main menu according to click user.  
-     _switch.forEach(change => {
-         change.addEventListener(eventType, function(){ 
+    // Show or hidden the main menu according to click user.  
+    _switch.forEach(change => {
+         change.addEventListener("pointerdown", function(){ 
              if (!flagMainMenu) {
                  showMenu();
                  logicLargeDevices.removeEvents();
@@ -90,14 +88,14 @@ let flagMainMenu = false,
              }       
          });
      });
-  
+     
     // Events of click or touchstart for show the dropdowns.
-    contentToLearn.addEventListener(eventType, function() {
+    contentToLearn.addEventListener("pointerdown", function() {
         changeIconArrow(iconToLearnExpandMore);
         toggleHiddenBox(showToLearn);
         onlyDropdown(showToLearn , parentDropdownLargeDevices);
     });
-    contentOthers.addEventListener(eventType, function() {
+    contentOthers.addEventListener("pointerdown", function() {
         changeIconArrow(iconOthersExpandMore);
         toggleHiddenBox(showOthers);
         onlyDropdown(showOthers, parentDropdownLargeDevices);
@@ -222,7 +220,7 @@ let flagMainMenu = false,
 
         // Show or hidden the accordion when the user clicks on the icon. including the content.
         const iconClickHandler = () => {
-
+            
             if (!flagIcon){
                 toggleAccordion();
                 changeIconSidebar();
@@ -232,13 +230,15 @@ let flagMainMenu = false,
                 changeIconSidebar();
                 flagIcon = false;
             }
-
+            
             function changeIconSidebar() {
                 iconList.classList.toggle("bi-list");
                 iconList.classList.toggle("bi-x");
             }
 
-            document.addEventListener(eventType, function(event) {
+            document.addEventListener("pointerdown", function(event) {
+                event.preventDefault();
+                console.log(event.pointerType);
                 if (! headerCellPhone.contains(event.target) && !accordion.contains(event.target) && !iconList.contains(event.target) && accordion.classList.contains("accordion-active")) {
                     toggleAccordion();
                     changeIconSidebar();
@@ -266,16 +266,16 @@ let flagMainMenu = false,
                 
         // Add events.
         window.addEventListener('scroll', scrollHandlerCell);
-        iconList.addEventListener(eventType, iconClickHandler);
-        contentToLearnPhone.addEventListener(eventType, contentToLearnHandler);
-        contentOthersPhone.addEventListener(eventType, contentOthersHandler);
+        iconList.addEventListener("pointerdown", iconClickHandler);
+        contentToLearnPhone.addEventListener("pointerdown", contentToLearnHandler);
+        contentOthersPhone.addEventListener("pointerdown", contentOthersHandler);
 
         // Cleanup the logic for cell phone.
         logicSmallDevices.cleanup = () => {
             window.removeEventListener('scroll', scrollHandlerCell); 
-            iconList.removeEventListener(eventType, iconClickHandler);
-            contentToLearnPhone.removeEventListener(eventType, contentToLearnHandler);
-            contentOthersPhone.removeEventListener(eventType, contentOthersHandler);
+            iconList.removeEventListener("pointerdown", iconClickHandler);
+            contentToLearnPhone.removeEventListener("pointerdown", contentToLearnHandler);
+            contentOthersPhone.removeEventListener("pointerdown", contentOthersHandler);
         };
     }
     // Verify if the function exists and cleanup the cell phone logic.
