@@ -196,7 +196,8 @@ const showHeader = document.querySelector(".show-header"),
         
         let lastScrollYCell= window.scrollY;
             flagAccordion = false,
-            flagIcon = false;
+            flagIcon = false,
+            hasPointerEvent = false;
 
         // Feat for hiding the header when the user scrolls down or show when scrolling up in cellphone.
         const scrollHandlerCell = () => {
@@ -219,33 +220,34 @@ const showHeader = document.querySelector(".show-header"),
         };
 
         // Show or hidden the accordion when the user clicks on the icon. including the content.
-        const iconClickHandler = () => {
-            
-            if (!flagIcon){
-                toggleAccordion();
-                changeIconSidebar();
-                flagIcon = true;
-            }else{
-                toggleAccordion();
-                changeIconSidebar();
-                flagIcon = false;
-            }
-            
-            function changeIconSidebar() {
-                iconList.classList.toggle("bi-list");
-                iconList.classList.toggle("bi-x");
-            }
-
-            document.addEventListener("pointerdown", function(event) {
+        const iconClickHandler = (event) => {
+            toggleAccordion();
+            changeIconSidebar();
+            outsideClickHandler(event);
+            flagIcon = !flagIcon;
+            if(!hasPointerEvent){
                 event.preventDefault();
-                if (! headerCellPhone.contains(event.target) && !accordion.contains(event.target) && !iconList.contains(event.target) && accordion.classList.contains("accordion-active")) {
-                    toggleAccordion();
-                    changeIconSidebar();
-                    flagIcon = false;
-                }
-            });        
+                document.addEventListener("pointerdown", outsideClickHandler);
+                hasPointerEvent = true;
+            }
         };
-
+        // Change the icon of the sidebar.
+        function changeIconSidebar() {
+            iconList.classList.toggle("bi-list");
+            iconList.classList.toggle("bi-x");
+        }
+        // Clear the accordion and the icon of the sidebar
+        function outsideClickHandler(event) {
+           
+            if (! headerCellPhone.contains(event.target) && !accordion.contains(event.target) && !iconList.contains(event.target) && accordion.classList.contains("accordion-active")) {
+                document.removeEventListener("pointerdown", outsideClickHandler);
+                toggleAccordion();
+                changeIconSidebar();
+                hasPointerEvent = false;
+                flagIcon = false;
+            } 
+        }
+        // Toggle the accordion when is active or not.
         function toggleAccordion() {        
             accordion.classList.toggle("accordion-active");
         }
