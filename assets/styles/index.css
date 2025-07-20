@@ -368,8 +368,14 @@ body{
   height: 375px;
   align-items: end;
 }
+.info-circle{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .profile-name{
   padding-left: 10px;
+  text-align: center;
 }
 .img-dark-arrow{
   width: 138px;
