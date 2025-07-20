@@ -85,6 +85,10 @@
     padding-left: 10px;
     padding-right: 10px;
 }
+.px-15px{
+    padding-left: 15px;
+    padding-right: 15px;
+}
 
 .pl-0{
     padding-left: 0;
@@ -164,6 +168,9 @@
 /*gap*/
 .gap-10px{
     gap: 10px;
+}
+.gap-20px{
+    gap: 20px;
 }
 
 /* changes of bootstrapt */
