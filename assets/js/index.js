@@ -3,7 +3,7 @@
  *  Description: This file manages the behavior of the textarea search input, including:
  *      
  *      - Dynamic placeholder resizing.
- *      - Showing/hiding the "about me" section, assigning images with animation to each card.
+ *      - Showing/hiding the "about me" section, assigning images.
  *      - Clearing the input from the button.
  *      - Showing/clearing card animations and handling user input.
  *      - Clipboard copy functionality.
@@ -14,7 +14,7 @@
  */
 // Global variables
 const textarea = document.querySelector('.textarea-search');
-const projectImages = document.querySelectorAll('.project-image');
+const assignImage = document.querySelectorAll('.assign-image');
 const contactMeBoxes = document.querySelectorAll(".contact-me-box");
 const articlesContainer = document.querySelector('.articles-container');
 const listContainer = document.querySelector(".list-articles");
@@ -29,7 +29,6 @@ import { renderPagination, clearPagination } from './index/pagination.js';
 
 
 //Call functions
-addEventsCards();
 setupGlobalEvents(textarea);
 
 // Clear the textarea value and the articles if there are articles.
@@ -42,26 +41,10 @@ function clear(event) {
 }
 
 // Assign images to project cards
-projectImages.forEach(card => {
-    let basePath = "https://murasaki-dbd90.web.app/images/projects/";
+assignImage.forEach(card => {
+    let basePath = "https://informacion-murasaki.web.app/images/projects/";
     card.style.setProperty('--img1', `url(${basePath + card.dataset.img1})`);
-    card.style.setProperty('--img2', `url(${basePath + card.dataset.img2})`);
-    card.style.setProperty('--img3', `url(${basePath + card.dataset.img3})`);
 });
-
-// Show and clear the animation of each card with a event of click.
-function addEventsCards() {
-    projectImages.forEach(card => {
-        card.addEventListener('click', () => animationHandler(card), {once: true}); 
-    });    
-}
-function animationHandler(card) {
-    toggleAnimation(card);
-    setTimeout(() => toggleAnimation(card), 3000);
-}
-function toggleAnimation(card) {
-    card.classList.toggle("project-image-click");
-}
 
 // Copy to clipboard functionality
 contactMeBoxes.forEach(box => {
