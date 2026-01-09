@@ -162,20 +162,11 @@ body{
 .project-image{
   border-top-left-radius: 10px;
   height: 180px;
+}
+.assign-image{ 
   background-repeat: no-repeat;
   background-size: cover;
   background-image: var(--img1);
-  transition: background-image 0.5s ease-in-out;
-}
-.project-image:hover, .project-image-click {
-  animation: changeImages 3s linear infinite ;
-}
-
-@keyframes changeImages {
-  0% { background-image: var(--img1); }
-  33.33% { background-image: var(--img2); }
-  66.66% { background-image: var(--img3); }
-  100% { background-image: var(--img1); }
 }
 .card-description{
   border-top: 1px solid black;
@@ -298,7 +289,6 @@ body{
   margin-bottom: 15px;
   gap: 5px;
 }
-
 .bold-number{
   padding: 5px 0;
   border-bottom: 2px solid black;
