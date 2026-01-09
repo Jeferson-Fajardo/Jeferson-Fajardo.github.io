@@ -1,7 +1,7 @@
 /**
 *  File: words-phrases-search.js
  *  Description: This file manages the behavior of the carousel on firebase searching for
- *  keywords and phrases every time the user reload the page.
+ *  words and phrases every time the user reload the page.
  *
  *  Dependencies:
  *       - /assets/js/data_bases/firebase.js: load the firebase configuration.
