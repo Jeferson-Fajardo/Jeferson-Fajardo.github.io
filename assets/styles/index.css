@@ -52,7 +52,7 @@ body{
   width: max-content;
   animation: scroll-right 15.6s linear infinite;
 }
-.text {
+.phrase , .word {
   display: inline-block;
   margin: 0 0.5rem;
   font-size: 1.3rem;
@@ -63,7 +63,7 @@ body{
   width: auto;
   white-space: nowrap; 
 }
-.text:hover{
+.phrase:hover, .word:hover {
   color: black;
   background-color: #9b9b9b;
 }
@@ -320,7 +320,7 @@ body{
 .article-title{
   font-size: 18px;
   display: -webkit-box;
-  -webkit-line-clamp: 2; /* Número de líneas que quieres mostrar */
+  -webkit-line-clamp: 2; 
   -webkit-box-orient: vertical;
   overflow: hidden;
 
